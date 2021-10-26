@@ -43,23 +43,23 @@
                     <ul class="menu-link">
                         <li>
                             <a href="service.html">
-                                <i class="fa fa-angle-right" aria-hidden="true"></i>Orthopadic Liabilities</a>
+                                <i class="fa fa-angle-right" aria-hidden="true"></i>layanan 1</a>
                         </li>
                         <li>
                             <a href="service.html">
-                                <i class="fa fa-angle-right" aria-hidden="true"></i>Dental Clinic</a>
+                                <i class="fa fa-angle-right" aria-hidden="true"></i>layanan</a>
                         </li>
                         <li>
                             <a href="service.html">
-                                <i class="fa fa-angle-right" aria-hidden="true"></i>Dormamu Clinic</a>
+                                <i class="fa fa-angle-right" aria-hidden="true"></i>layanan</a>
                         </li>
                         <li>
                             <a href="service.html">
-                                <i class="fa fa-angle-right" aria-hidden="true"></i>Psycological Clinic</a>
+                                <i class="fa fa-angle-right" aria-hidden="true"></i>layananc</a>
                         </li>
                         <li>
                             <a href="service.html">
-                                <i class="fa fa-angle-right" aria-hidden="true"></i>Gynaecological Clinic</a>
+                                <i class="fa fa-angle-right" aria-hidden="true"></i>layanan</a>
                         </li>
                     </ul>
                 </div>
