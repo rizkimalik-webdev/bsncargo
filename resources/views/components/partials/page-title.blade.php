@@ -4,7 +4,7 @@
 <section class="page-title text-center">
     <div class="container">
         <div class="title-text">
-            <h1>{{ $slot }}</h1>
+            <h1 class="text-warning">{{ $company->company }}</h1>
             <ul class="title-menu clearfix">
                 <li>
                     <a href="{{ url('/home') }}">Beranda &nbsp;/</a>

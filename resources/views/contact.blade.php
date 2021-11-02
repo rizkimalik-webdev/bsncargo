@@ -1,47 +1,35 @@
 <x-app-layout>
-    <x-partials.page-title>
-        PT BINTANG SAMUDRA NUSWANTORO
-    </x-partials.page-title>
+    <x-partials.page-title :company="$company" />
 
     <section class="section contact">
         <!-- container start -->
         <div class="container">
             <div class="row">
                 <div class="col-lg-5">
-                    <!-- address start -->
                     <div class="address-block">
-                        <!-- Location -->
-                        <div class="media">
-                            <i class="far fa-map"></i>
-                            <div class="media-body">
-                                <h3>Location</h3>
-                                <p>PO Box 16122 Collins Street West <br>Victoria 8007 Canada</p>
-                            </div>
-                        </div>
-                        <!-- Phone -->
                         <div class="media">
                             <i class="fas fa-phone"></i>
                             <div class="media-body">
-                                <h3>Phone</h3>
-                                <p>
-                                    (+48) 564-334-21-22-34
-                                    <br>(+48) 564-334-21-22-38
-                                </p>
+                                <h3>Telephone :</h3>
+                                <p>{{ $company->telp }}</p>
                             </div>
                         </div>
-                        <!-- Email -->
                         <div class="media">
                             <i class="far fa-envelope"></i>
                             <div class="media-body">
-                                <h3>Email</h3>
-                                <p>
-                                    info@templatepath.com
-                                    <br>info@cleanxer.com
-                                </p>
+                                <h3>Email :</h3>
+                                <p>{{ $company->email }}</p>
+                            </div>
+                        </div>
+                        <div class="media">
+                            <i class="far fa-map"></i>
+                            <div class="media-body">
+                                <h3>Alamat :</h3>
+                                <p>{{ $company->address}} <br> {{ $company->city}}</p>
                             </div>
                         </div>
                     </div>
-                    <!-- address end -->
+                    
                 </div>
                 <div class="col-lg-7">
                     <div class="contact-form">
@@ -80,7 +68,7 @@
     {{-- <section class="map">
         <!-- Google Map -->
         <div id="map" style="background-color: grey">
-        <iframe src="https://www.google.com/maps" frameborder="0"></iframe>
+            <iframe src="https://www.google.com/maps" frameborder="0"></iframe>
         </div>
     </section> --}}
 

@@ -1,4 +1,4 @@
 <x-app-layout>
-    <x-features />
+    <x-service :services="$services" />
     <x-service-detail />
 </x-app-layout>

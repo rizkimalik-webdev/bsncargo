@@ -14,7 +14,7 @@
                     <div class="item">
                         <div class="inner-box">
                             <div class="img_holder">
-                                    <img loading="lazy" src="{{ asset('theme/images/gallery/1.png') }}" alt="images" class="img-fluid">
+                                    <img loading="lazy" src="{{ asset('public/theme/images/gallery/1.png') }}" alt="images" class="img-fluid">
                             </div>
                             <div class="image-content text-center">
                                 <span>Better Service At Low Cost</span>
@@ -26,7 +26,7 @@
                     <div class="item">
                         <div class="inner-box">
                             <div class="img_holder">
-                                    <img loading="lazy" src="{{ asset('theme/images/gallery/1.png') }}" alt="images" class="img-fluid">
+                                    <img loading="lazy" src="{{ asset('public/theme/images/gallery/1.png') }}" alt="images" class="img-fluid">
                             </div>
                             <div class="image-content text-center">
                                 <span>Better Service At Low Cost</span>
@@ -38,7 +38,7 @@
                     <div class="item">
                         <div class="inner-box">
                             <div class="img_holder">
-                                    <img loading="lazy" src="{{ asset('theme/images/gallery/1.png') }}" alt="images" class="img-fluid">
+                                    <img loading="lazy" src="{{ asset('public/theme/images/gallery/1.png') }}" alt="images" class="img-fluid">
                             </div>
                             <div class="image-content text-center">
                                 <span>Better Service At Low Cost</span>
@@ -51,7 +51,7 @@
                         <div class="inner-box">
                             <div class="img_holder">
                                 <a href="service.html">
-                                    <img loading="lazy" src="{{ asset('theme/images/gallery/1.png') }}" alt="images" class="img-fluid">
+                                    <img loading="lazy" src="{{ asset('public/theme/images/gallery/1.png') }}" alt="images" class="img-fluid">
                                 </a>
                             </div>
                             <div class="image-content text-center">
@@ -64,7 +64,7 @@
                     <div class="item">
                         <div class="inner-box">
                             <div class="img_holder">
-                                    <img loading="lazy" src="{{ asset('theme/images/gallery/1.png') }}" alt="images" class="img-fluid">
+                                    <img loading="lazy" src="{{ asset('public/theme/images/gallery/1.png') }}" alt="images" class="img-fluid">
                             </div>
                             <div class="image-content text-center">
                                 <span>Better Service At Low Cost</span>
@@ -76,7 +76,7 @@
                     <div class="item">
                         <div class="inner-box">
                             <div class="img_holder">
-                                    <img loading="lazy" src="{{ asset('theme/images/gallery/1.png') }}" alt="images" class="img-fluid">
+                                    <img loading="lazy" src="{{ asset('public/theme/images/gallery/1.png') }}" alt="images" class="img-fluid">
                             </div>
                             <div class="image-content text-center">
                                 <span>Better Service At Low Cost</span>

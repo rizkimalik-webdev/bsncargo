@@ -7,33 +7,35 @@
                         <div class="footer-logo">
                             <figure>
                                 <a href="{{ url('/home') }}">
-                                    <img loading="lazy"  height="80"src="{{ asset('theme/images/bsncargo.png') }}" alt="medic">
+                                    <img loading="lazy"  height="80"src="{{ asset('public/theme/images/'.$company->image) }}" alt="medic">
                                 </a>
                             </figure>
                         </div>
-                        <p>PT BINTANG SAMUDRA NUSWANTORO</p>
+                        <p>{{ $company->company }}</p>
                         <ul class="location-link">
                             <li class="item">
                                 <i class="fas fa-map-marker-alt"></i>
-                                <p>Jakarta Selatan, Indonesia</p>
+                                <p>{{ $company->address }}</p>
                             </li>
                             <li class="item">
                                 <i class="far fa-envelope" aria-hidden="true"></i>
-                                <a href="mailto:sales@bsncargo.com">
-                                    <p>sales@bsncargo.com</p>
+                                <a href="mailto:{{ $company->email }}">
+                                    <p>{{ $company->email }}</p>
                                 </a>
                             </li>
                             <li class="item">
                                 <i class="fas fa-phone" aria-hidden="true"></i>
-                                <p>(62) +123 4567</p>
+                                <p>{{ $company->telp }}</p>
                             </li>
                         </ul>
                         <ul class="list-inline social-icons">
-                            <li class="list-inline-item"><a href="https://facebook.com/themefisher"
+                            <li class="list-inline-item"><a href="https://facebook.com/{{ $company->facebook }}"
                                     aria-label="facebook"><i class="fab fa-facebook-f"></i></a></li>
-                            <li class="list-inline-item"><a href="https://twitter.com/themefisher"
+                            <li class="list-inline-item"><a href="https://twitter.com/{{ $company->twitter }}"
                                     aria-label="twitter"><i class="fab fa-twitter"></i></a></li>
-                            <li class="list-inline-item"><a href="https://instagram.com/themefisher"
+                            <li class="list-inline-item"><a href="https://instagram.com/{{ $company->instagram }}"
+                                    aria-label="instagram"><i class="fab fa-instagram"></i></a></li>
+                            <li class="list-inline-item"><a href="https://wa.me/{{ $company->whatsapp }}"
                                     aria-label="whatsapp"><i class="fab fa-whatsapp"></i></a></li>
                         </ul>
                     </div>
@@ -41,26 +43,13 @@
                 <div class="col-lg-3 col-md-5 mb-3 mb-md-0">
                     <h2>Layanan</h2>
                     <ul class="menu-link">
+                        @foreach ($services as $item)
                         <li>
-                            <a href="service.html">
-                                <i class="fa fa-angle-right" aria-hidden="true"></i>layanan 1</a>
+                            <a href="service">
+                                <i class="fa fa-angle-right" aria-hidden="true"></i>{{ $item->service }}
+                            </a>
                         </li>
-                        <li>
-                            <a href="service.html">
-                                <i class="fa fa-angle-right" aria-hidden="true"></i>layanan</a>
-                        </li>
-                        <li>
-                            <a href="service.html">
-                                <i class="fa fa-angle-right" aria-hidden="true"></i>layanan</a>
-                        </li>
-                        <li>
-                            <a href="service.html">
-                                <i class="fa fa-angle-right" aria-hidden="true"></i>layananc</a>
-                        </li>
-                        <li>
-                            <a href="service.html">
-                                <i class="fa fa-angle-right" aria-hidden="true"></i>layanan</a>
-                        </li>
+                        @endforeach
                     </ul>
                 </div>
                 <div class="col-lg-4 col-md-7">
@@ -104,18 +93,18 @@
     <div class="footer-bottom">
         <div class="container clearfix">
             <div class="copyright-text">
-                <p>&copy; Copyright 2021. PT Bintang Samudra Nuswantoro</a>
+                <p>&copy; Copyright 2021. {{ $company->company }}</a>
                 </p>
             </div>
             <ul class="footer-bottom-link">
                 <li>
-                    <a href="/">Beranda</a>
+                    <a href="{{ url('/home') }}">Beranda</a>
                 </li>
                 <li>
-                    <a href="/about">Tentang Kami</a>
+                    <a href="{{ url('/about') }}">Tentang Kami</a>
                 </li>
                 <li>
-                    <a href="/contact">Kontak</a>
+                    <a href="{{ url('/contact') }}">Kontak</a>
                 </li>
             </ul>
         </div>

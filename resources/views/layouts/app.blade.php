@@ -11,40 +11,43 @@
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
 
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('public/apple-touch-icon.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('public/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('public/favicon-16x16.png') }}">
+    <link rel="manifest" href="{{ asset('public/site.webmanifest') }}">
+
     <!-- bootstrap -->
-    <link rel="stylesheet" href="{{ asset('theme/plugins/bootstrap/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('public/theme/plugins/bootstrap/bootstrap.min.css') }}">
     <!-- Slick Carousel -->
-    <link rel="stylesheet" href="{{ asset('theme/plugins/slick/slick.css') }}">
-    <link rel="stylesheet" href="{{ asset('theme/plugins/slick/slick-theme.css') }}">
+    <link rel="stylesheet" href="{{ asset('public/theme/plugins/slick/slick.css') }}">
+    <link rel="stylesheet" href="{{ asset('public/theme/plugins/slick/slick-theme.css') }}">
     <!-- FancyBox -->
-    <link rel="stylesheet" href="{{ asset('theme/plugins/fancybox/jquery.fancybox.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('public/theme/plugins/fancybox/jquery.fancybox.min.css') }}">
     <!-- fontawesome -->
-    <link rel="stylesheet" href="{{ asset('theme/plugins/fontawesome/css/all.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('public/theme/plugins/fontawesome/css/all.min.css') }}">
     <!-- animate.css -->
-    <link rel="stylesheet" href="{{ asset('theme/plugins/animation/animate.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('public/theme/plugins/animation/animate.min.css') }}">
     <!-- jquery-ui -->
-    <link rel="stylesheet" href="{{ asset('theme/plugins/jquery-ui/jquery-ui.css') }}">
+    <link rel="stylesheet" href="{{ asset('public/theme/plugins/jquery-ui/jquery-ui.css') }}">
     <!-- timePicker -->
-    <link rel="stylesheet" href="{{ asset('theme/plugins/timePicker/timePicker.css') }}">
+    <link rel="stylesheet" href="{{ asset('public/theme/plugins/timePicker/timePicker.css') }}">
 
     <!-- Stylesheets -->
-    <link href="{{ asset('theme/css/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('public/theme/css/style.css') }}" rel="stylesheet">
 
 </head>
 
 <body>
     <div class="page-wrapper">
-        <x-partials.header-top :mail="$mail" :whatsapp="$whatsapp" :facebook="$facebook" :twitter="$twitter" />
-        <x-partials.header-uper :mail="$mail" :whatsapp="$whatsapp" :telp="$telp" />
+        <x-partials.header-top :company="$company" />
+        <x-partials.header-uper :company="$company" />
         <x-partials.main-navbar />
-        {{-- <x-slider />
-        <x-call-to-action /> --}}
-
+        
         <main>
             {{ $slot }}
         </main>
 
-        <x-partials.main-footer />
+        <x-partials.main-footer :company="$company" :services="$services" />
     </div>
 
 
@@ -65,21 +68,21 @@
 
 
     <!-- jquery -->
-    <script src="{{ asset('theme/plugins/jquery.min.js') }}"></script>
+    <script src="{{ asset('public/theme/plugins/jquery.min.js') }}"></script>
     <!-- bootstrap -->
-    <script src="{{ asset('theme/plugins/bootstrap/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('public/theme/plugins/bootstrap/bootstrap.min.js') }}"></script>
     <!-- Slick Slider -->
-    <script src="{{ asset('theme/plugins/slick/slick.min.js') }}"></script>
-    <script src="{{ asset('theme/plugins/slick/slick-animation.min.js') }}"></script>
+    <script src="{{ asset('public/theme/plugins/slick/slick.min.js') }}"></script>
+    <script src="{{ asset('public/theme/plugins/slick/slick-animation.min.js') }}"></script>
     <!-- FancyBox -->
-    <script src="{{ asset('theme/plugins/fancybox/jquery.fancybox.min.js') }}" defer></script>
+    <script src="{{ asset('public/theme/plugins/fancybox/jquery.fancybox.min.js') }}" defer></script>
     <!-- jquery-ui -->
-    <script src="{{ asset('theme/plugins/jquery-ui/jquery-ui.js') }}" defer></script>
+    <script src="{{ asset('public/theme/plugins/jquery-ui/jquery-ui.js') }}" defer></script>
     <!-- timePicker -->
-    <script src="{{ asset('theme/plugins/timePicker/timePicker.js') }}" defer></script>
+    <script src="{{ asset('public/theme/plugins/timePicker/timePicker.js') }}" defer></script>
 
     <!-- script js -->
-    <script src="{{ asset('theme/js/script.js') }}"></script>
+    <script src="{{ asset('public/theme/js/script.js') }}"></script>
 
 </body>
 

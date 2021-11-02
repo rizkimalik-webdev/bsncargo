@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Company;
 use Illuminate\Http\Request;
 
 
@@ -14,7 +15,9 @@ class ContactController extends Controller
 
     public function index()
     {
-        return view('contact');
+        $company = Company::first();
+
+        return view('contact', compact('company'));
     }
     
 }

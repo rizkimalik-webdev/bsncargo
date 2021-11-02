@@ -1,9 +1,9 @@
-<x-app-layout>
-    <x-slider />
+<x-app-layout> 
+    <x-slider :sliders="$sliders" />
     <x-call-to-action />
-    <x-features />
+    <x-service :services="$services" />
 
-    <x-testimonial />
+    <x-client :clients="$clients" />
     <x-gallery-slider />
 
 </x-app-layout>

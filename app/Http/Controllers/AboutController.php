@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\About;
+use App\Models\Company;
+use App\Models\Partner;
 use Illuminate\Http\Request;
 
 
@@ -14,7 +17,10 @@ class AboutController extends Controller
 
     public function index()
     {
-        return view('about');
+        $company = Company::first();
+        $about = About::first();
+        $partners = Partner::get();
+
+        return view('about', ['company' => $company, 'about' => $about, 'partners' => $partners]);
     }
-    
 }
