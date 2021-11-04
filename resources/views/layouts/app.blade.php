@@ -47,7 +47,7 @@
             {{ $slot }}
         </main>
 
-        <x-partials.main-footer :company="$company" :services="$services" />
+        <x-partials.main-footer :company="$company" :services="$services" :gallery="$gallery" />
     </div>
 
 

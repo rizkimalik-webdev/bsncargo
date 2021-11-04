@@ -54,23 +54,25 @@
                 </div>
                 <div class="col-lg-4 col-md-7">
                     <div class="social-links">
-                        <h2>Perusahaan</h2>
+                        <h2>Gallery</h2>
                         <ul>
+                            @foreach ($gallery as $item)
                             <li class="item">
                                 <div class="media">
                                     <div class="media-left mr-3">
-                                        <a href="blog-details.html">
-                                            <img loading="lazy" src="images/blog/post-thumb-small.jpg" alt="post-thumb">
+                                        <a href="{{ url('/gallery') }}">
+                                            <img loading="lazy" src="{{ asset('public/theme/images/galleries/'.$item->image) }}" alt="{{ $item->title }}">
                                         </a>
                                     </div>
                                     <div class="media-body">
-                                        <h5><a href="blog-details.html">A lesson adip isicing</a></h5>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, dolorem.
-                                        </p>
+                                        <h5><a href="{{ url('/gallery') }}">{{ $item->title }}</a></h5>
+                                        <p>{{ $item->description }}</p>
                                     </div>
                                 </div>
                             </li>
-                            <li class="item">
+                            @endforeach
+                            
+                            {{-- <li class="item">
                                 <div class="media">
                                     <div class="media-left mr-3">
                                         <a href="blog-details.html">
@@ -83,7 +85,7 @@
                                         </p>
                                     </div>
                                 </div>
-                            </li>
+                            </li> --}}
                         </ul>
                     </div>
                 </div>
