@@ -15,7 +15,7 @@
                     <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                     Slider Utama
                 </a>
-                <a class="nav-link" href="{{ url('/admin/slider') }}">
+                <a class="nav-link" href="{{ url('/admin/gallery') }}">
                     <div class="sb-nav-link-icon"><i class="fas fa-photo-video"></i></div>
                     Gallery
                 </a>

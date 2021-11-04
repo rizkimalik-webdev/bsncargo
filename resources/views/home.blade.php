@@ -4,6 +4,6 @@
     <x-service :services="$services" />
 
     <x-client :clients="$clients" />
-    <x-gallery-slider />
+    <x-gallery-slider :gallerySliders="$gallerySliders" />
 
 </x-app-layout>

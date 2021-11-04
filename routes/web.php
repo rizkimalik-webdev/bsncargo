@@ -17,6 +17,7 @@ use App\Http\Controllers\Admin\ClientController;
 use App\Http\Controllers\Admin\ServiceController as AdminServiceController;
 use App\Http\Controllers\Admin\FaqController as AdminFaqController;
 use App\Http\Controllers\Admin\AboutController as AdminAboutController;
+use App\Http\Controllers\Admin\GalleryController as AdminGalleryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -92,6 +93,14 @@ Route::middleware(['auth', 'verified'])->group(function () {
         Route::get('/client/{clients:id}/edit', [ClientController::class, 'edit']);
         Route::put('/client/update/{clients:id}', [ClientController::class, 'update']);
         Route::get('/client/destroy/{clients:id}', [ClientController::class, 'destroy']);
+
+        Route::get('/gallery', [AdminGalleryController::class, 'index']);
+        Route::get('/gallery/create', [AdminGalleryController::class, 'create']);
+        Route::post('/gallery/store', [AdminGalleryController::class, 'store']);
+        Route::get('/gallery/{galleries:id}/edit', [AdminGalleryController::class, 'edit']);
+        Route::put('/gallery/update/{galleries:id}', [AdminGalleryController::class, 'update']);
+        Route::get('/gallery/destroy/{galleries:id}', [AdminGalleryController::class, 'destroy']);
+
 
         // Route::get('/upload', [UploadController::class, 'index']);
         // Route::post('/upload/proses', [UploadController::class, 'store']);

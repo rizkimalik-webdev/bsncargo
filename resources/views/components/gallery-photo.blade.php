@@ -11,15 +11,18 @@
                     </p>
                 </div>
             </div>
+            @foreach ($galleries as $item)
             <div class="col-lg-4 col-md-6">
                 <div class="gallery-item">
-                    <img loading="lazy" src="images/gallery/gallery-01.jpg" class="img-fluid" alt="gallery-image">
-                    <a data-fancybox="images" href="images/gallery/gallery-01.jpg"></a>
-                    <h3>Facility 01</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, in.</p>
+                    <img loading="lazy" src="{{ url('public/theme/images/galleries/'.$item->image) }}" class="img-fluid" alt="{{ $item->title }}">
+                    <a data-fancybox="images" href="{{ url('public/theme/images/galleries/'.$item->image) }}"></a>
+                    <h3>{{ $item->title }}</h3>
+                    <p>{{ $item->description }}</p>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6">
+            @endforeach
+            
+            {{-- <div class="col-lg-4 col-md-6">
                 <div class="gallery-item">
                     <img loading="lazy" src="images/gallery/gallery-02.jpg" class="img-fluid" alt="gallery-image">
                     <a data-fancybox="images" href="images/gallery/gallery-02.jpg"></a>
@@ -58,7 +61,7 @@
                     <h3>Facility 06</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, in.</p>
                 </div>
-            </div>
+            </div> --}}
         </div>
     </div>
 </section>
