@@ -6,13 +6,8 @@
         <div class="container">
             <div class="row my-4">
                 <div class="col-lg-12 story-content">
-                    <h2>Tujuan Visi & Misi</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus totam ducimus est vero,
-                        officiis,
-                        placeat optio. Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias aliquam
-                        nesciunt fugit optio
-                        illum aut. consectetur adipisicing elit. Neque assumenda, est quam perferendis
-                        expedita autem?</p>
+                    <h2>TENTANG {{ $company->company }}</h2>
+                    <p>{{ $company->detail }}</p>
                 </div>
             </div>
             <div class="row">

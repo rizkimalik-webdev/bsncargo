@@ -1,6 +1,6 @@
 <x-app-layout> 
     <x-slider :sliders="$sliders" />
-    <x-call-to-action />
+    <x-call-to-action :company="$company" />
     <x-service :services="$services" />
 
     <x-client :clients="$clients" />

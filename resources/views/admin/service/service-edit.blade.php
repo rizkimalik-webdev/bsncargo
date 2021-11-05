@@ -1,7 +1,7 @@
 <x-admin-layout>
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb mt-4">
-            <li class="breadcrumb-item"><a href="{{ url('/admin/service') }}">Layanan</a></li>
+            <li class="breadcrumb-item"><a href="{{ url('/admin_service') }}">Layanan</a></li>
             <li class="breadcrumb-item active" aria-current="page">Edit</li>
         </ol>
     </nav>
@@ -13,7 +13,7 @@
             Edit Layanan
         </div>
         <div class="card-body">
-            <form action="{{ url('/admin/service/update', $services->id) }}" method="POST" enctype="multipart/form-data">
+            <form action="{{ url('/admin_service/update', $services->id) }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 @method('PUT')
 
@@ -34,7 +34,7 @@
 
                 <div class="pull-right">
                     <button class="btn btn-primary" type="submit">Update</button>
-                    <a href="{{ url('/admin/service') }}" class="btn btn-outline-primary">Kembali</a>
+                    <a href="{{ url('/admin_service') }}" class="btn btn-outline-primary">Kembali</a>
                 </div>
             </form>
         </div>

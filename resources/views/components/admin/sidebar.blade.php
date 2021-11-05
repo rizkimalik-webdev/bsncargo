@@ -3,19 +3,19 @@
         <div class="sb-sidenav-menu">
             <div class="nav">
                 <div class="sb-sidenav-menu-heading">Menu</div>
-                <a class="nav-link" href="{{ url('/admin/profile') }}">
+                <a class="nav-link" href="{{ url('/admin_profile') }}">
                     <div class="sb-nav-link-icon"><i class="fa fa-building"></i></div>
                     Profile Perusahaan
                 </a>
-                <a class="nav-link" href="{{ url('/admin/service') }}">
+                <a class="nav-link" href="{{ url('/admin_service') }}">
                     <div class="sb-nav-link-icon"><i class="fa fa-box"></i></div>
                     Kategori Layanan
                 </a>
-                <a class="nav-link" href="{{ url('/admin/slider') }}">
+                <a class="nav-link" href="{{ url('/admin_slider') }}">
                     <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                     Slider Utama
                 </a>
-                <a class="nav-link" href="{{ url('/admin/gallery') }}">
+                <a class="nav-link" href="{{ url('/admin_gallery') }}">
                     <div class="sb-nav-link-icon"><i class="fas fa-photo-video"></i></div>
                     Gallery
                 </a>
@@ -30,22 +30,22 @@
                 <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne"
                     data-bs-parent="#sidenavAccordion">
                     <nav class="sb-sidenav-menu-nested nav">
-                        <a class="nav-link" href="{{ url('/admin/faq/syarat') }}">Syarat Ketentuan</a>
-                        <a class="nav-link" href="{{ url('/admin/faq/bisnis') }}">Bisnis & Jasa</a>
+                        <a class="nav-link" href="{{ url('/admin_faq/syarat') }}">Syarat Ketentuan</a>
+                        <a class="nav-link" href="{{ url('/admin_faq/bisnis') }}">Bisnis & Jasa</a>
                     </nav>
                 </div>
-                <a class="nav-link" href="{{ url('/admin/about') }}">
+                <a class="nav-link" href="{{ url('/admin_about') }}">
                     <div class="sb-nav-link-icon"><i class="fas fa-align-right"></i></div>
                     Visi & Misi
                 </a>
 
 
                 <div class="sb-sidenav-menu-heading">Addons</div>
-                <a class="nav-link" href="{{ url('/admin/partner') }}">
+                <a class="nav-link" href="{{ url('/admin_partner') }}">
                     <div class="sb-nav-link-icon"><i class="fas fa-handshake"></i></div>
                     Partner Perusahaan
                 </a>
-                <a class="nav-link" href="{{ url('/admin/client') }}">
+                <a class="nav-link" href="{{ url('/admin_client') }}">
                     <div class="sb-nav-link-icon"><i class="fas fa-users"></i></div>
                     Client Testimonial
                 </a>

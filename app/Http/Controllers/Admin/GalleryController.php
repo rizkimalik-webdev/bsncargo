@@ -52,7 +52,7 @@ class GalleryController extends Controller
             'image' => $nama_image,
         ]);
 
-        return redirect('/admin/gallery')->with('status', 'Berhasil tambah Data.');
+        return redirect('/admin_gallery')->with('status', 'Berhasil tambah Data.');
     }
 
 
@@ -103,10 +103,10 @@ class GalleryController extends Controller
 
         if($gallery){
             //? redirect dengan pesan sukses
-            return redirect('/admin/gallery')->with('status','Data Berhasil Diupdate!');
+            return redirect('/admin_gallery')->with('status','Data Berhasil Diupdate!');
         }else{
             //! redirect dengan pesan error
-            return redirect('/admin/gallery')->with('status','Data Gagal Diupdate!');
+            return redirect('/admin_gallery')->with('status','Data Gagal Diupdate!');
         }
     }
 

@@ -9,7 +9,7 @@
 
         <div class="row mb-5">
             <div class="col-lg-12 d-flex justify-content-end">
-                <a href="{{ url('/admin/client/create') }}" class="btn btn-sm btn-primary">Tambah Client</a>
+                <a href="{{ url('/admin_client/create') }}" class="btn btn-sm btn-primary">Tambah Client</a>
             </div>
         </div>
     </div>
@@ -37,8 +37,8 @@
                                 <p class="card-text">{{ $item->description }}</p>
         
                                 <div class="d-flex justify-content-center mt-2">
-                                    <a href="{{ url('/admin/client/'.$item->id.'/edit') }}" class="btn btn-sm btn-primary m-1">Edit</a>
-                                    <a href="{{ url('/admin/client/destroy/'.$item->id) }}" class="btn btn-sm btn-danger m-1">Hapus</a>
+                                    <a href="{{ url('/admin_client/'.$item->id.'/edit') }}" class="btn btn-sm btn-primary m-1">Edit</a>
+                                    <a href="{{ url('/admin_client/destroy/'.$item->id) }}" class="btn btn-sm btn-danger m-1">Hapus</a>
                                 </div>
         
                             </div>

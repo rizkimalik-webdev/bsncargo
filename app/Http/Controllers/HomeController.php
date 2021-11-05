@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Client;
+use App\Models\Company;
 use App\Models\Gallery;
 use App\Models\Service;
 use App\Models\Slider;
@@ -17,6 +18,7 @@ class HomeController extends Controller
 
     public function index()
     {
+        $company = Company::first();
         $services = Service::get();
         $sliders = Slider::orderBy('id', 'desc')->take(10)->get();
         $clients = Client::orderBy('id', 'desc')->take(10)->get();
@@ -24,6 +26,7 @@ class HomeController extends Controller
 
 
         return view('home', [
+            'company' => $company, 
             'sliders' => $sliders, 
             'services' => $services, 
             'clients' => $clients,

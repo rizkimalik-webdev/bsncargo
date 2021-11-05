@@ -6,11 +6,13 @@ use Illuminate\View\Component;
 
 class AdminLayout extends Component
 {
-    /**
-     * Get the view / contents that represents the component.
-     *
-     * @return \Illuminate\View\View
-     */
+    public $title= 'BSN Cargo';
+
+    public function __construct()
+    {
+        // $this->title = 'BSN CARGO';
+    }
+
     public function render()
     {
         return view('layouts.admin');

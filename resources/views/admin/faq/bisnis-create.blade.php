@@ -1,7 +1,7 @@
 <x-admin-layout>
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb mt-4">
-            <li class="breadcrumb-item"><a href="{{ url('/admin/faq/bisnis') }}">Faq</a></li>
+            <li class="breadcrumb-item"><a href="{{ url('/admin_faq/bisnis') }}">Faq</a></li>
             <li class="breadcrumb-item active" aria-current="page">Create</li>
         </ol>
     </nav>
@@ -11,7 +11,7 @@
             Tambah Baru 
         </div>
         <div class="card-body">
-            <form action="{{ url('/admin/faq/bisnis/store') }}" method="POST">
+            <form action="{{ url('/admin_faq/bisnis/store') }}" method="POST">
                 @csrf
 
                 <div class="mb-3">
@@ -26,7 +26,7 @@
 
                 <div class="pull-right">
                     <button class="btn btn-primary" type="submit">Simpan</button>
-                    <a href="{{ url('/admin/faq/bisnis') }}" class="btn btn-outline-primary">Kembali</a>
+                    <a href="{{ url('/admin_faq/bisnis') }}" class="btn btn-outline-primary">Kembali</a>
                 </div>
             </form>
         </div>

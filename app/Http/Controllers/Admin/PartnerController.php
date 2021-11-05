@@ -52,7 +52,7 @@ class PartnerController extends Controller
             'image' => $nama_image,
         ]);
 
-        return redirect('/admin/partner')->with('status', 'Berhasil tambah Data.');
+        return redirect('/admin_partner')->with('status', 'Berhasil tambah Data.');
     }
 
 
@@ -104,10 +104,10 @@ class PartnerController extends Controller
 
         if($partner){
             //? redirect dengan pesan sukses
-            return redirect('/admin/partner')->with('status','Data Berhasil Diupdate!');
+            return redirect('/admin_partner')->with('status','Data Berhasil Diupdate!');
         }else{
             //! redirect dengan pesan error
-            return redirect('/admin/partner')->with('status','Data Gagal Diupdate!');
+            return redirect('/admin_partner')->with('status','Data Gagal Diupdate!');
         }
     }
 

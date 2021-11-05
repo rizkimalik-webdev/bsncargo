@@ -1,7 +1,7 @@
 <x-admin-layout>
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb mt-4">
-            <li class="breadcrumb-item"><a href="{{ url('/admin/gallery') }}">Gallery</a></li>
+            <li class="breadcrumb-item"><a href="{{ url('/admin_gallery') }}">Gallery</a></li>
             <li class="breadcrumb-item active" aria-current="page">Tambah Gallery</li>
         </ol>
     </nav>
@@ -13,7 +13,7 @@
             Tambah Gallery
         </div>
         <div class="card-body">
-            <form action="{{ url('/admin/gallery/store') }}" method="POST" enctype="multipart/form-data">
+            <form action="{{ url('/admin_gallery/store') }}" method="POST" enctype="multipart/form-data">
                 @csrf
 
                 <div class="mb-3">
@@ -33,7 +33,7 @@
 
                 <div class="pull-right">
                     <button class="btn btn-primary" type="submit">Simpan</button>
-                    <a href="{{ url('/admin/gallery') }}" class="btn btn-outline-primary">Kembali</a>
+                    <a href="{{ url('/admin_gallery') }}" class="btn btn-outline-primary">Kembali</a>
                 </div>
             </form>
         </div>

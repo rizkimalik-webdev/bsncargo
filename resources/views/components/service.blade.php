@@ -5,8 +5,8 @@
                 <div class="image-content">
                     <div class="section-title text-center">
                         <h3>Kategori Layanan</span></h3>
-                        <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam magni in at
-                            debitis <br> nam error officia vero tempora alias? Sunt?</p>
+                        {{-- <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam magni in at
+                            debitis <br> nam error officia vero tempora alias? Sunt?</p> --}}
                     </div>
 
                     <div class="row">
