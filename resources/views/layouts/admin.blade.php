@@ -11,13 +11,13 @@
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
 
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('public/apple-touch-icon.png') }}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('public/favicon-32x32.png') }}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('public/favicon-16x16.png') }}">
-    <link rel="manifest" href="{{ asset('public/site.webmanifest') }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('apple-touch-icon.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('favicon-16x16.png') }}">
+    <link rel="manifest" href="{{ asset('site.webmanifest') }}">
 
-    <link rel="stylesheet" href="{{ asset('public/theme/plugins/fontawesome/css/all.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('public/theme/admin/css/styles.css') }}">
+    <link rel="stylesheet" href="{{ asset('theme/plugins/fontawesome/css/all.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('theme/admin/css/styles.css') }}">
 </head>
 
 <body class="sb-nav-fixed">
@@ -38,8 +38,8 @@
     </div>
 
     <!-- scripts -->
-    <script src="{{ asset('public/theme/admin/js/bootstrap.min.js') }}"></script>
-    <script src="{{ asset('public/theme/admin/js/scripts.js') }}"></script>
+    <script src="{{ asset('theme/admin/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('theme/admin/js/scripts.js') }}"></script>
 </body>
 
 </html>

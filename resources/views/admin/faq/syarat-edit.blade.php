@@ -1,7 +1,7 @@
 <x-admin-layout>
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb mt-4">
-            <li class="breadcrumb-item"><a href="{{ url('/admin_faq/syarat') }}">Faq</a></li>
+            <li class="breadcrumb-item"><a href="{{ url('/faq/syarat') }}">Faq</a></li>
             <li class="breadcrumb-item active" aria-current="page">Edit</li>
         </ol>
     </nav>
@@ -13,7 +13,7 @@
             Edit syarat / ketentuan
         </div>
         <div class="card-body">
-            <form action="{{ url('/admin_faq/syarat/update', $faqs->id) }}" method="POST">
+            <form action="{{ url('/faq/syarat/update', $faqs->id) }}" method="POST">
                 @csrf
                 @method('PUT')
 
@@ -29,7 +29,7 @@
 
                 <div class="pull-right">
                     <button class="btn btn-primary" type="submit">Update</button>
-                    <a href="{{ url('/admin_faq/syarat') }}" class="btn btn-outline-primary">Kembali</a>
+                    <a href="{{ url('/faq/syarat') }}" class="btn btn-outline-primary">Kembali</a>
                 </div>
             </form>
         </div>

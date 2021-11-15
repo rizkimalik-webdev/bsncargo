@@ -1,4 +1,4 @@
-<section class="testimonial-section" style="background: url({{ asset('public/theme/images/background/testimonial-1.jpg') }});">
+<section class="testimonial-section" style="background: url({{ asset('theme/images/background/testimonial-1.jpg') }});">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
@@ -17,7 +17,7 @@
                         <div class="inner-box text-center">
                             <div class="image-box">
                                 <figure>
-                                    <img loading="lazy" src="{{ asset('public/theme/images/client/'.$item->image) }}" alt="{{ $item->client }}">
+                                    <img loading="lazy" src="{{ asset('theme/images/client/'.$item->image) }}" alt="{{ $item->client }}">
                                 </figure>
                             </div>
                             <h6>{{ $item->client }}</h6>

@@ -16,10 +16,10 @@
                     <div class="item">
                         <div class="inner-box">
                             <div class="img_holder">
-                                <img loading="lazy" src="{{ asset('public/theme/images/galleries/'.$item->image) }}"
+                                <img loading="lazy" src="{{ asset('theme/images/galleries/'.$item->image) }}"
                                     alt="{{ $item->title }}" class="img-fluid">
                                 <a data-fancybox="images"
-                                    href="{{ url('public/theme/images/galleries/'.$item->image) }}"></a>
+                                    href="{{ url('theme/images/galleries/'.$item->image) }}"></a>
                             </div>
                             <div class="image-content text-center">
                                 {{-- <span>{{ $item->title }}</span> --}}
@@ -33,7 +33,7 @@
                     {{-- <div class="item">
                         <div class="inner-box">
                             <div class="img_holder">
-                                <img loading="lazy" src="{{ asset('public/theme/images/gallery/1.png') }}" alt="images"
+                                <img loading="lazy" src="{{ asset('theme/images/gallery/1.png') }}" alt="images"
                                     class="img-fluid">
                             </div>
                             <div class="image-content text-center">
@@ -46,7 +46,7 @@
                     <div class="item">
                         <div class="inner-box">
                             <div class="img_holder">
-                                <img loading="lazy" src="{{ asset('public/theme/images/gallery/1.png') }}" alt="images"
+                                <img loading="lazy" src="{{ asset('theme/images/gallery/1.png') }}" alt="images"
                                     class="img-fluid">
                             </div>
                             <div class="image-content text-center">
@@ -60,7 +60,7 @@
                         <div class="inner-box">
                             <div class="img_holder">
                                 <a href="service.html">
-                                    <img loading="lazy" src="{{ asset('public/theme/images/gallery/1.png') }}"
+                                    <img loading="lazy" src="{{ asset('theme/images/gallery/1.png') }}"
                                         alt="images" class="img-fluid">
                                 </a>
                             </div>
@@ -74,7 +74,7 @@
                     <div class="item">
                         <div class="inner-box">
                             <div class="img_holder">
-                                <img loading="lazy" src="{{ asset('public/theme/images/gallery/1.png') }}" alt="images"
+                                <img loading="lazy" src="{{ asset('theme/images/gallery/1.png') }}" alt="images"
                                     class="img-fluid">
                             </div>
                             <div class="image-content text-center">
@@ -87,7 +87,7 @@
                     <div class="item">
                         <div class="inner-box">
                             <div class="img_holder">
-                                <img loading="lazy" src="{{ asset('public/theme/images/gallery/1.png') }}" alt="images"
+                                <img loading="lazy" src="{{ asset('theme/images/gallery/1.png') }}" alt="images"
                                     class="img-fluid">
                             </div>
                             <div class="image-content text-center">

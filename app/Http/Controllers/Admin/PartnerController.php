@@ -43,7 +43,7 @@ class PartnerController extends Controller
         // $nama_image = $image->hashName();
 
         //? folder file diupload
-        $tujuan_upload = 'public/theme/images/partner';
+        $tujuan_upload = 'theme/images/partner';
         $image->move($tujuan_upload, $nama_image);
 
         Partner::create([
@@ -52,7 +52,7 @@ class PartnerController extends Controller
             'image' => $nama_image,
         ]);
 
-        return redirect('/admin_partner')->with('status', 'Berhasil tambah Data.');
+        return redirect('/partner')->with('status', 'Berhasil tambah Data.');
     }
 
 
@@ -82,7 +82,7 @@ class PartnerController extends Controller
         } 
         else {
             //hapus old image
-            File::delete('public/theme/images/partner/' . $partner->image);
+            File::delete('theme/images/partner/' . $partner->image);
 
             //upload new image
             $image = $request->file('image');
@@ -90,7 +90,7 @@ class PartnerController extends Controller
             // $nama_image = $image->hashName();
             
             //? folder file diupload
-            $tujuan_upload = 'public/theme/images/partner';
+            $tujuan_upload = 'theme/images/partner';
             $image->move($tujuan_upload, $nama_image);
             // $image->storeAs($tujuan_upload, $nama_image);
 
@@ -104,10 +104,10 @@ class PartnerController extends Controller
 
         if($partner){
             //? redirect dengan pesan sukses
-            return redirect('/admin_partner')->with('status','Data Berhasil Diupdate!');
+            return redirect('/partner')->with('status','Data Berhasil Diupdate!');
         }else{
             //! redirect dengan pesan error
-            return redirect('/admin_partner')->with('status','Data Gagal Diupdate!');
+            return redirect('/partner')->with('status','Data Gagal Diupdate!');
         }
     }
 
@@ -115,7 +115,7 @@ class PartnerController extends Controller
     {
         // hapus file
         $partner = Partner::where('id', $partners->id)->first();
-        File::delete('public/theme/images/partner/' . $partner->image);
+        File::delete('theme/images/partner/' . $partner->image);
 
         // hapus data
         Partner::where('id', $partner->id)->delete();

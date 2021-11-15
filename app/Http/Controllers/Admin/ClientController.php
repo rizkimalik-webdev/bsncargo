@@ -43,7 +43,7 @@ class ClientController extends Controller
         // $nama_image = $image->hashName();
 
         //? folder file diupload
-        $tujuan_upload = 'public/theme/images/client';
+        $tujuan_upload = 'theme/images/client';
         $image->move($tujuan_upload, $nama_image);
 
         Client::create([
@@ -52,7 +52,7 @@ class ClientController extends Controller
             'image' => $nama_image,
         ]);
 
-        return redirect('/admin_client')->with('status', 'Berhasil tambah Data.');
+        return redirect('/client')->with('status', 'Berhasil tambah Data.');
     }
 
 
@@ -82,7 +82,7 @@ class ClientController extends Controller
         } 
         else {
             //hapus old image
-            File::delete('public/theme/images/client/' . $client->image);
+            File::delete('theme/images/client/' . $client->image);
 
             //upload new image
             $image = $request->file('image');
@@ -90,7 +90,7 @@ class ClientController extends Controller
             // $nama_image = $image->hashName();
             
             //? folder file diupload
-            $tujuan_upload = 'public/theme/images/client';
+            $tujuan_upload = 'theme/images/client';
             $image->move($tujuan_upload, $nama_image);
             // $image->storeAs($tujuan_upload, $nama_image);
 
@@ -104,10 +104,10 @@ class ClientController extends Controller
 
         if($client){
             //? redirect dengan pesan sukses
-            return redirect('/admin_client')->with('status','Data Berhasil Diupdate!');
+            return redirect('/client')->with('status','Data Berhasil Diupdate!');
         }else{
             //! redirect dengan pesan error
-            return redirect('/admin_client')->with('status','Data Gagal Diupdate!');
+            return redirect('/client')->with('status','Data Gagal Diupdate!');
         }
     }
 
@@ -115,7 +115,7 @@ class ClientController extends Controller
     {
         // hapus file
         $client = Client::where('id', $clients->id)->first();
-        File::delete('public/theme/images/client/' . $client->image);
+        File::delete('theme/images/client/' . $client->image);
 
         // hapus data
         Client::where('id', $client->id)->delete();

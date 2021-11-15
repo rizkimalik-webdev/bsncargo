@@ -1,7 +1,7 @@
 <x-admin-layout>
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb mt-4">
-            <li class="breadcrumb-item"><a href="{{ url('/admin_slider') }}">Slider</a></li>
+            <li class="breadcrumb-item"><a href="{{ url('/slider') }}">Slider</a></li>
             <li class="breadcrumb-item active" aria-current="page">Edit</li>
         </ol>
     </nav>
@@ -11,7 +11,7 @@
             Form Update Slider
         </div>
         <div class="card-body">
-            <form action="{{ url('/admin_slider/update',$sliders->id) }}" method="POST" enctype="multipart/form-data">
+            <form action="{{ url('/slider/update',$sliders->id) }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 @method('PUT')
 
@@ -31,7 +31,7 @@
 
                 <div class="pull-right">
                     <button class="btn btn-primary" type="submit">Update</button>
-                    <a href="{{ url('/admin_slider') }}" class="btn btn-outline-primary">Kembali</a>
+                    <a href="{{ url('/slider') }}" class="btn btn-outline-primary">Kembali</a>
                 </div>
             </form>
         </div>

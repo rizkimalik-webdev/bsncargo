@@ -42,7 +42,7 @@ class SliderController extends Controller
         // $nama_image = time() . "_" . $image->getClientOriginalName();
 
         //? folder file diupload
-        $tujuan_upload = 'public/theme/images/slider';
+        $tujuan_upload = 'theme/images/slider';
         $image->move($tujuan_upload, $nama_image);
 
         Slider::create([
@@ -51,7 +51,7 @@ class SliderController extends Controller
             'image' => $nama_image,
         ]);
 
-        return redirect('/admin_slider')->with('status', 'Berhasil tambah Data.');
+        return redirect('/slider')->with('status', 'Berhasil tambah Data.');
     }
 
     public function edit(Slider $sliders)
@@ -79,7 +79,7 @@ class SliderController extends Controller
         } 
         else {
             //hapus old image
-            File::delete('public/theme/images/slider/' . $slider->image);
+            File::delete('theme/images/slider/' . $slider->image);
 
             //upload new image
             $image = $request->file('image');
@@ -87,7 +87,7 @@ class SliderController extends Controller
             // $nama_image = time() . "_" . $image->getClientOriginalName();
             
             //? folder file diupload
-            $tujuan_upload = 'public/theme/images/slider';
+            $tujuan_upload = 'theme/images/slider';
             $image->move($tujuan_upload, $nama_image);
             // $image->storeAs($tujuan_upload, $nama_image);
 
@@ -102,10 +102,10 @@ class SliderController extends Controller
         // $product->update($request->all());
         if($slider){
             //? redirect dengan pesan sukses
-            return redirect('/admin_slider')->with('status','Data Berhasil Diupdate!');
+            return redirect('/slider')->with('status','Data Berhasil Diupdate!');
         }else{
             //! redirect dengan pesan error
-            return redirect('/admin_slider')->with('status','Data Gagal Diupdate!');
+            return redirect('/slider')->with('status','Data Gagal Diupdate!');
         }
     }
 
@@ -113,7 +113,7 @@ class SliderController extends Controller
     {
         // hapus file
         $slider = Slider::where('id', $sliders->id)->first();
-        File::delete('public/theme/images/slider/' . $slider->image);
+        File::delete('theme/images/slider/' . $slider->image);
 
         // hapus data
         Slider::where('id', $slider->id)->delete();

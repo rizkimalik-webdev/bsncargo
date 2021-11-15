@@ -7,7 +7,7 @@
                         <div class="footer-logo">
                             <figure>
                                 <a href="{{ url('/home') }}">
-                                    <img loading="lazy"  height="80"src="{{ asset('public/theme/images/'.$company->image) }}" alt="medic">
+                                    <img loading="lazy"  height="80"src="{{ asset('theme/images/'.$company->image) }}" alt="medic">
                                 </a>
                             </figure>
                         </div>
@@ -61,7 +61,7 @@
                                 <div class="media">
                                     <div class="media-left mr-3">
                                         <a href="{{ url('/gallery') }}">
-                                            <img loading="lazy" src="{{ asset('public/theme/images/galleries/'.$item->image) }}" alt="{{ $item->title }}">
+                                            <img loading="lazy" src="{{ asset('theme/images/galleries/'.$item->image) }}" alt="{{ $item->title }}">
                                         </a>
                                     </div>
                                     <div class="media-body">

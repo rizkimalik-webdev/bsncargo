@@ -43,7 +43,7 @@ class ServiceController extends Controller
         $nama_image = time().'_'.$image->getClientOriginalName();
 
         //? folder file diupload
-        $tujuan_upload = 'public/theme/images/services';
+        $tujuan_upload = 'theme/images/services';
         $image->move($tujuan_upload, $nama_image);
 
         Service::create([
@@ -52,7 +52,7 @@ class ServiceController extends Controller
             'image' => $nama_image,
         ]);
 
-        return redirect('/admin_service')->with('status', 'Berhasil tambah Data.');
+        return redirect('/service')->with('status', 'Berhasil tambah Data.');
     }
 
 
@@ -82,7 +82,7 @@ class ServiceController extends Controller
         } 
         else {
             //hapus old image
-            File::delete('public/theme/images/services/' . $service->image);
+            File::delete('theme/images/services/' . $service->image);
 
             //upload new image
             $image = $request->file('image');
@@ -90,7 +90,7 @@ class ServiceController extends Controller
             // $nama_image = $image->hashName();
             
             //? folder file diupload
-            $tujuan_upload = 'public/theme/images/services';
+            $tujuan_upload = 'theme/images/services';
             $image->move($tujuan_upload, $nama_image);
             // $image->storeAs($tujuan_upload, $nama_image);
 
@@ -104,10 +104,10 @@ class ServiceController extends Controller
 
         if($service){
             //? redirect dengan pesan sukses
-            return redirect('/admin_service')->with('status','Data Berhasil Diupdate!');
+            return redirect('/service')->with('status','Data Berhasil Diupdate!');
         }else{
             //! redirect dengan pesan error
-            return redirect('/admin_service')->with('status','Data Gagal Diupdate!');
+            return redirect('/service')->with('status','Data Gagal Diupdate!');
         }
     }
 
@@ -115,7 +115,7 @@ class ServiceController extends Controller
     {
         // hapus file
         $service = Service::where('id', $services->id)->first();
-        File::delete('public/theme/images/services/' . $service->image);
+        File::delete('theme/images/services/' . $service->image);
 
         // hapus data
         Service::where('id', $service->id)->delete();

@@ -16,9 +16,9 @@
     <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('favicon-16x16.png') }}">
     <link rel="manifest" href="{{ asset('site.webmanifest') }}">
 
-    <link rel="stylesheet" href="{{ asset('public/theme/plugins/fontawesome/css/all.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('public/theme/admin/css/styles.css') }}">
-    <link rel="stylesheet" href="{{ asset('public/theme/admin/css/login.css') }}">
+    <link rel="stylesheet" href="{{ asset('theme/plugins/fontawesome/css/all.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('theme/admin/css/styles.css') }}">
+    <link rel="stylesheet" href="{{ asset('theme/admin/css/login.css') }}">
 </head>
 
 <body class="bg-light text-center">
@@ -26,7 +26,7 @@
         <form method="POST" action="{{ route('login') }}">
             @csrf
 
-            <img class="mb-4" src="{{ asset('public/theme/images/bsncargo.png') }}" alt="" width="80" height="80">
+            <img class="mb-4" src="{{ asset('theme/images/bsncargo.png') }}" alt="" width="80" height="80">
             <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
 
             <div class="form-floating mb-3">
@@ -63,8 +63,8 @@
     </main>
 
     <!-- scripts -->
-    <script src="{{ asset('public/theme/admin/js/bootstrap.min.js') }}"></script>
-    <script src="{{ asset('public/theme/admin/js/scripts.js') }}"></script>
+    <script src="{{ asset('theme/admin/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('theme/admin/js/scripts.js') }}"></script>
 </body>
 
 </html>

@@ -14,8 +14,8 @@
             @foreach ($galleries as $item)
             <div class="col-lg-4 col-md-6">
                 <div class="gallery-item">
-                    <img loading="lazy" src="{{ url('public/theme/images/galleries/'.$item->image) }}" class="img-fluid" alt="{{ $item->title }}">
-                    <a data-fancybox="images" href="{{ url('public/theme/images/galleries/'.$item->image) }}"></a>
+                    <img loading="lazy" src="{{ url('theme/images/galleries/'.$item->image) }}" class="img-fluid" alt="{{ $item->title }}">
+                    <a data-fancybox="images" href="{{ url('theme/images/galleries/'.$item->image) }}"></a>
                     <h3>{{ $item->title }}</h3>
                     <p>{{ $item->description }}</p>
                 </div>

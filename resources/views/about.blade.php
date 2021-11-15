@@ -12,7 +12,7 @@
             </div>
             <div class="row">
                 <div class="col-lg-6">
-                    <img loading="lazy" src="{{ asset('public/theme/images/about/about-1.jpg') }}" class="responsive"
+                    <img loading="lazy" src="{{ asset('theme/images/about/about-1.jpg') }}" class="responsive"
                         alt="story">
                 </div>
                 <div class="col-lg-6">

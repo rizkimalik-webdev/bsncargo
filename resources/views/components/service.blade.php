@@ -16,7 +16,7 @@
                                 <div class="icon-box">
                                     <figure>
                                         <img loading="lazy" height="60"
-                                            src="{{ asset('public/theme/images/services/'.$item->image) }}"
+                                            src="{{ asset('theme/images/services/'.$item->image) }}"
                                             alt="{{ $item->service }}">
                                     </figure>
                                 </div>

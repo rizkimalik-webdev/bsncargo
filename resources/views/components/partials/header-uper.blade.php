@@ -4,7 +4,7 @@
             <div class="col-xl-4 col-lg-3">
                 <div class="logo">
                     <a href="#">
-                        <img loading="lazy" height="80" class="" src="{{ asset('public/theme/images/'.$company->image) }}" alt="logo">
+                        <img loading="lazy" height="80" class="" src="{{ asset('theme/images/'.$company->image) }}" alt="logo">
                     </a>
                 </div>
             </div>

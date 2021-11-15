@@ -43,7 +43,7 @@ class GalleryController extends Controller
         // $nama_image = time().'_'.$image->getClientOriginalName();
 
         //? folder file diupload
-        $tujuan_upload = 'public/theme/images/galleries';
+        $tujuan_upload = 'theme/images/galleries';
         $image->move($tujuan_upload, $nama_image);
 
         Gallery::create([
@@ -52,7 +52,7 @@ class GalleryController extends Controller
             'image' => $nama_image,
         ]);
 
-        return redirect('/admin_gallery')->with('status', 'Berhasil tambah Data.');
+        return redirect('/gallery')->with('status', 'Berhasil tambah Data.');
     }
 
 
@@ -81,7 +81,7 @@ class GalleryController extends Controller
         } 
         else {
             //hapus old image
-            File::delete('public/theme/images/galleries/' . $gallery->image);
+            File::delete('theme/images/galleries/' . $gallery->image);
 
             //upload new image
             $image = $request->file('image');
@@ -89,7 +89,7 @@ class GalleryController extends Controller
             $nama_image = $image->hashName();
             
             //? folder file diupload
-            $tujuan_upload = 'public/theme/images/galleries';
+            $tujuan_upload = 'theme/images/galleries';
             $image->move($tujuan_upload, $nama_image);
             // $image->storeAs($tujuan_upload, $nama_image);
 
@@ -103,10 +103,10 @@ class GalleryController extends Controller
 
         if($gallery){
             //? redirect dengan pesan sukses
-            return redirect('/admin_gallery')->with('status','Data Berhasil Diupdate!');
+            return redirect('/gallery')->with('status','Data Berhasil Diupdate!');
         }else{
             //! redirect dengan pesan error
-            return redirect('/admin_gallery')->with('status','Data Gagal Diupdate!');
+            return redirect('/gallery')->with('status','Data Gagal Diupdate!');
         }
     }
 
@@ -114,7 +114,7 @@ class GalleryController extends Controller
     {
         // hapus file
         $gallery = Gallery::where('id', $galleries->id)->first();
-        File::delete('public/theme/images/galleries/' . $gallery->image);
+        File::delete('theme/images/galleries/' . $gallery->image);
 
         // hapus data
         Gallery::where('id', $gallery->id)->delete();

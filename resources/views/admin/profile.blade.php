@@ -1,7 +1,7 @@
 <x-admin-layout>
     <div class="container">
         <div class="py-5 text-center">
-            <img class="d-block mx-auto mb-4" src="{{ asset('public/theme/images/'.$company->image) }}" alt="" width="80"
+            <img class="d-block mx-auto mb-4" src="{{ asset('theme/images/'.$company->image) }}" alt="" width="80"
                 height="80">
             <h2>{{ $company->company }}</h2>
             <p>{{ $company->detail }}</p>
@@ -93,7 +93,7 @@
                         Informasi Perusahaan
                     </div>
                     <div class="card-body">
-                        <form action="{{ url('/admin_profile/update', $company->id) }}" method="POST"
+                        <form action="{{ url('/profile/update', $company->id) }}" method="POST"
                             enctype="multipart/form-data">
                             @csrf
                             @method('PUT')

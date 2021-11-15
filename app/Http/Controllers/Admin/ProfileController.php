@@ -53,7 +53,7 @@ class ProfileController extends Controller
         } 
         else {
             //hapus old image
-            File::delete('public/theme/images/' . $data->image);
+            File::delete('theme/images/' . $data->image);
 
             //upload new image
             $image = $request->file('image');
@@ -61,7 +61,7 @@ class ProfileController extends Controller
             // $nama_image = $image->hashName();
             
             //? folder file diupload
-            $tujuan_upload = 'public/theme/images';
+            $tujuan_upload = 'theme/images';
             $image->move($tujuan_upload, $nama_image);
             // $image->storeAs($tujuan_upload, $nama_image);
 
