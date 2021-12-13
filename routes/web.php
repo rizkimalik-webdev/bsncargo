@@ -2,14 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
-// use App\Http\Controllers\AboutController;
-// use App\Http\Controllers\ContactController;
-// use App\Http\Controllers\FaqController;
-// use App\Http\Controllers\GalleryController;
-// use App\Http\Controllers\HomeController;
-// use App\Http\Controllers\ServiceController;
-// use App\Http\Controllers\TeamController;
-// use App\Http\Controllers\UploadController;
 use App\Http\Controllers\Admin\SliderController;
 use App\Http\Controllers\Admin\ProfileController;
 use App\Http\Controllers\Admin\PartnerController;
@@ -40,7 +32,7 @@ Route::get('/', function(){
 
 //? Admin Route
 Route::middleware(['auth', 'verified'])->group(function () {
-    // Route::prefix('admin')->group(function () {
+    // Route::group('admin')->group(function () {
         Route::get('/profile', [ProfileController::class, 'index']);
         Route::put('/profile/update/{company:id}', [ProfileController::class, 'update']);
 
