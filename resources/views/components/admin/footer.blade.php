@@ -3,7 +3,7 @@
         <div class="d-flex align-items-center justify-content-between small">
             <div class="text-muted">Copyright &copy; BSN Cargo 2021</div>
             <div>
-                <a href="{{ url('/home') }}">www.bsncargo.com</a>
+                <a href="https://bsncargo.co.id" target="_blank">www.bsncargo.co.id</a>
                 {{-- &middot; --}}
                 {{-- <a href="#">Terms &amp; Conditions</a> --}}
             </div>

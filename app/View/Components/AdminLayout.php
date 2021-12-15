@@ -7,6 +7,8 @@ use Illuminate\View\Component;
 class AdminLayout extends Component
 {
     public $title= 'BSN Cargo';
+    public $style = null;
+    public $script = null;
 
     public function __construct()
     {

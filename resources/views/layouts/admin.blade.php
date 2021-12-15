@@ -18,6 +18,8 @@
 
     <link rel="stylesheet" href="{{ asset('theme/plugins/fontawesome/css/all.min.css') }}">
     <link rel="stylesheet" href="{{ asset('theme/admin/css/styles.css') }}">
+
+    {{ $style }}
 </head>
 
 <body class="sb-nav-fixed">
@@ -40,6 +42,8 @@
     <!-- scripts -->
     <script src="{{ asset('theme/admin/js/bootstrap.min.js') }}"></script>
     <script src="{{ asset('theme/admin/js/scripts.js') }}"></script>
+
+    {{ $script }}
 </body>
 
 </html>

@@ -10,6 +10,7 @@ use App\Http\Controllers\Admin\ServiceController as AdminServiceController;
 use App\Http\Controllers\Admin\FaqController as AdminFaqController;
 use App\Http\Controllers\Admin\AboutController as AdminAboutController;
 use App\Http\Controllers\Admin\GalleryController as AdminGalleryController;
+use App\Http\Controllers\Admin\ShipmentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -88,6 +89,9 @@ Route::middleware(['auth', 'verified'])->group(function () {
         Route::put('/gallery/update/{galleries:id}', [AdminGalleryController::class, 'update']);
         Route::get('/gallery/destroy/{galleries:id}', [AdminGalleryController::class, 'destroy']);
 
+        Route::get('/shipment', [ShipmentController::class, 'index']);
+        Route::get('/shipment/create', [ShipmentController::class, 'create']);
+        Route::post('/shipment/store', [ShipmentController::class, 'store']);
 
         // Route::get('/upload', [UploadController::class, 'index']);
         // Route::post('/upload/proses', [UploadController::class, 'store']);
