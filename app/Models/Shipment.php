@@ -20,6 +20,8 @@ class Shipment extends Model
         'destination', 
         'datetime', 
         'description', 
+        'shipper_id', 
+        'receiver_id', 
         'product', 
         'amount', 
         'unit', 

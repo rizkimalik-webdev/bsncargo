@@ -11,6 +11,7 @@ use App\Http\Controllers\Admin\FaqController as AdminFaqController;
 use App\Http\Controllers\Admin\AboutController as AdminAboutController;
 use App\Http\Controllers\Admin\GalleryController as AdminGalleryController;
 use App\Http\Controllers\Admin\ShipmentController;
+use App\Http\Controllers\Admin\TrackingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -92,6 +93,11 @@ Route::middleware(['auth', 'verified'])->group(function () {
         Route::get('/shipment', [ShipmentController::class, 'index']);
         Route::get('/shipment/create', [ShipmentController::class, 'create']);
         Route::post('/shipment/store', [ShipmentController::class, 'store']);
+        Route::get('/shipment/destroy/{shipments:no_invoice}', [ShipmentController::class, 'destroy']);
+        
+        Route::get('/tracking/{shipments:no_invoice}', [TrackingController::class, 'tracking']);
+        Route::post('/tracking/store', [TrackingController::class, 'store']);
+
 
         // Route::get('/upload', [UploadController::class, 'index']);
         // Route::post('/upload/proses', [UploadController::class, 'store']);

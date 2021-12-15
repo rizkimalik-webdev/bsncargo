@@ -41,7 +41,7 @@
                             <div class="mb-2">
                                 <label for="no_invoice" class="form-label">No Resi / AWB / Invoice</label>
                                 <input type="number" class="form-control" id="no_invoice" name="no_invoice"
-                                    placeholder="No RESI" required>
+                                    min="6" placeholder="No RESI" required>
                             </div>
                             <div class="mb-2">
                                 <label for="datetime" class="form-label">Tanggal Pickup</label>
@@ -55,6 +55,7 @@
                     <div class="row">
                         <div class="col-lg-6">
                             <h5>Detail Pengirim</h5>
+                            <input type="hidden" id="shipper_id" name="shipper_id">
                             <div class="mb-2">
                                 <label for="shipper_name" class="form-label">Nama Pengirim</label>
                                 <input type="text" class="form-control" id="shipper_name" name="shipper_name"
@@ -62,7 +63,7 @@
                             </div>
                             <div class="mb-2">
                                 <label for="shipper_telp" class="form-label">No. Telp</label>
-                                <input type="text" class="form-control" id="shipper_telp" name="shipper_telp"
+                                <input type="number" class="form-control" id="shipper_telp" name="shipper_telp"
                                     placeholder="No Telp Pengirim" required>
                             </div>
                             <div class="mb-2">
@@ -78,6 +79,7 @@
                         </div>
                         <div class="col-lg-6">
                             <h5>Detail Penerima</h5>
+                            <input type="hidden" id="receiver_id" name="receiver_id">
                             <div class="mb-2">
                                 <label for="receiver_name" class="form-label">Nama Penerima</label>
                                 <input type="text" class="form-control" id="receiver_name" name="receiver_name"
@@ -85,7 +87,7 @@
                             </div>
                             <div class="mb-2">
                                 <label for="receiver_telp" class="form-label">No. Telp</label>
-                                <input type="text" class="form-control" id="receiver_telp" name="receiver_telp"
+                                <input type="number" class="form-control" id="receiver_telp" name="receiver_telp"
                                     placeholder="No. Telp Penerima" required>
                             </div>
                             <div class="mb-2">
@@ -114,7 +116,7 @@
                         <div class="col-lg-6">
                             <label for="amount" class="form-label">Jumlah</label>
                             <div class="input-group mb-2">
-                                <input type="number" class="form-control" id="amount" name="amount">
+                                <input type="number" class="form-control" id="amount" name="amount" placeholder="Jumlah">
                                 <select class="form-select" id="unit" name="unit">
                                     <option value="" selected>Satuan</option>
                                     @foreach ($satuan as $item)
@@ -185,14 +187,14 @@
                     <div class="row">
                         <div class="col-lg-6">
                             <div class="mb-2">
-                                <label for="description" class="form-label">Keterangan</label>
+                                <label for="description" class="form-label">Keterangan (optional)</label>
                                 <textarea class="form-control" id="description" name="description" rows="3"
                                     placeholder="Keterangan"></textarea>
                             </div>
                         </div>
                         <div class="col-lg-6">
                             <div class="mb-2">
-                                <label for="file_invoice" class="form-label">Attachment Invoice</label>
+                                <label for="file_invoice" class="form-label">Attachment Invoice (optional)</label>
                                 <input class="form-control" type="file" id="file_invoice" name="file_invoice"
                                     aria-describedby="imageHelp">
                                 <div id="imageHelp" class="form-text">File max 2Mb.</div>
@@ -202,9 +204,9 @@
                 </div>
 
 
-                <div class="pull-right">
+                <div class="d-flex flex-row-reverse p-1 my-4">
                     <button class="btn btn-primary" type="submit">Simpan</button>
-                    <a href="{{ url('/shipment') }}" class="btn btn-outline-primary">Kembali</a>
+                    <a href="{{ url('/shipment') }}" class="btn btn-outline-primary mx-2">Kembali</a>
                 </div>
             </form>
         </div>

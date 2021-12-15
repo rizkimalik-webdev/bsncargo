@@ -4,8 +4,12 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Company;
+use App\Models\Product;
+use App\Models\Receiver;
 use App\Models\Shipment;
 use App\Models\Satuan;
+use App\Models\ShipmentTracking;
+use App\Models\Shipper;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
@@ -20,10 +24,13 @@ class ShipmentController extends Controller
 
     public function index()
     {
-        $shipments = Shipment::get();
+        $shipments = Shipment::orderBy('id', 'DESC')->get();
+        foreach ($shipments as $shipment) {
+            $tracking = ShipmentTracking::where('no_invoice',$shipment->no_invoice)->select('status')->orderBy('id', 'DESC')->first();
+            $shipment->status = $tracking->status;
+        }
         return view('admin.shipment.shipment-index', compact('shipments'));
     }
-
 
     public function create()
     {
@@ -38,7 +45,7 @@ class ShipmentController extends Controller
     {
         $this->validate($request, [
             'file_invoice' => 'file|mimes:jpeg,png,jpg,doc,docx,pdf|max:2048',
-            'no_invoice' => 'required',
+            'no_invoice' => 'required|numeric|min:6',
             'logistic_id' => 'required',
             'datetime' => 'required',
             'shipper_name' => 'required',
@@ -55,29 +62,66 @@ class ShipmentController extends Controller
         if ($file_invoice != "") {
             $file_invoice_hash = $file_invoice->hashName();
             // $file_invoice = time().'_'.$image->getClientOriginalName();
-            //? folder file diupload
-            $tujuan_upload = 'theme/invoice';
+            $tujuan_upload = 'theme/invoice'; //? folder file diupload
             $file_invoice->move($tujuan_upload, $file_invoice_hash);
         } 
-        $slug_product = Str::slug($request->product, '-');
 
-        // 'shipper_name' => $request->shipper_name,
-            // 'shipper_telp' => $request->shipper_telp,
-            // 'shipper_city' => $request->shipper_city,
-            // 'shipper_address' => $request->shipper_address,
+        $product_slug = "";
+        if ($request->product){
+            $product_slug = Str::slug($request->product, '-');
 
-            // 'receiver_name' => $request->receiver_name,
-            // 'receiver_telp' => $request->receiver_telp,
-            // 'receiver_city' => $request->receiver_city,
-            // 'receiver_address' => $request->receiver_address,
+            Product::create([
+                'product_slug' => $product_slug,
+                'product_name' => $request->product,
+            ]);
+        }
+        
+        $shipper_id = "";
+        if ($request->shipper_id) {
+            $shipper_id = $request->shipper_id;
+        }
+        else {
+            $shipper = Shipper::create([
+                'shipper_name' => $request->shipper_name,
+                'shipper_telp' => $request->shipper_telp,
+                'shipper_city' => $request->shipper_city,
+                'shipper_address' => $request->shipper_address,
+            ]);
+            $shipper_id = $shipper->id;
+        }
+        
+        $receiver_id = "";
+        if ($request->receiver_id) {
+            $receiver_id = $request->receiver_id;
+        }
+        else {
+            $receiver = Receiver::create([
+                'receiver_name' => $request->receiver_name,
+                'receiver_telp' => $request->receiver_telp,
+                'receiver_city' => $request->receiver_city,
+                'receiver_address' => $request->receiver_address
+            ]);
+            $receiver_id = $receiver->id;
+        }
 
+        //? tracking pick-up
+        ShipmentTracking::create([
+            'no_invoice' => $request->no_invoice,
+            'datetime' => date('Y-m-d H:i:s'),
+            'status' => 'PICK-UP',
+            'description' => $request->description,
+        ]);
+        
+        //? shipment
         Shipment::create([
             'logistic_id' => (int)$request->logistic_id,
             'no_invoice' => $request->no_invoice,
-            'datetime' => date('Y-m-d H:i:s'),
+            'datetime' => $request->datetime,
             'origin' => $request->shipper_city,
             'destination' => $request->receiver_city,
-            'product' => $slug_product,
+            'product' => $product_slug,
+            'shipper_id' => $shipper_id,
+            'receiver_id' => $receiver_id,
             'amount' => $request->amount,
             'unit' => $request->unit,
             'driver' => $request->driver,
@@ -147,15 +191,22 @@ class ShipmentController extends Controller
         }
     }
 
-    public function destroy(Shipment $Shipments)
+    public function destroy(Shipment $shipments)
     {
+        $shipment = Shipment::where('no_invoice', $shipments->no_invoice)->first();
+        $tracking = ShipmentTracking::where('no_invoice', $shipments->no_invoice)->get();
+
         // hapus file
-        $Shipment = Shipment::where('id', $Shipments->id)->first();
-        File::delete('theme/images/Shipment/' . $Shipment->image);
+        if ($shipment->file_invoice) {
+            File::delete('theme/invoice/' . $shipment->file_invoice);
+        }
 
         // hapus data
-        Shipment::where('id', $Shipment->id)->delete();
+        Shipment::where('id', $shipment->id)->delete();
+        foreach ($tracking as $track) {
+            ShipmentTracking::where('no_invoice', $track->no_invoice)->delete();
+        }
 
-        return redirect()->back();
+        return redirect()->back(); 
     }
 }
