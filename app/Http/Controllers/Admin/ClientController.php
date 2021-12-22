@@ -52,7 +52,7 @@ class ClientController extends Controller
             'image' => $nama_image,
         ]);
 
-        return redirect('/client')->with('status', 'Berhasil tambah Data.');
+        return redirect('/admin_client')->with('status', 'Berhasil tambah Data.');
     }
 
 
@@ -104,10 +104,10 @@ class ClientController extends Controller
 
         if($client){
             //? redirect dengan pesan sukses
-            return redirect('/client')->with('status','Data Berhasil Diupdate!');
+            return redirect('/admin_client')->with('status','Data Berhasil Diupdate!');
         }else{
             //! redirect dengan pesan error
-            return redirect('/client')->with('status','Data Gagal Diupdate!');
+            return redirect('/admin_client')->with('status','Data Gagal Diupdate!');
         }
     }
 

@@ -10,7 +10,7 @@
 
         <div class="row mb-5">
             <div class="col-lg-12 d-flex justify-content-end">
-                <a href="{{ url('/slider/create') }}" class="btn btn-sm btn-primary">Tambah Slider</a>
+                <a href="{{ url('/admin_slider/create') }}" class="btn btn-sm btn-primary">Tambah Slider</a>
             </div>
         </div>
     </div>
@@ -35,8 +35,8 @@
                         <p class="card-text">{{ $item->description }}</p>
 
                         <div class="d-flex justify-content-center mt-5">
-                            <a href="{{ url('/slider/'.$item->id.'/edit') }}" class="btn btn-sm btn-primary m-1">Edit</a>
-                            <a href="{{ url('/slider/destroy/'.$item->id) }}" class="btn btn-sm btn-danger m-1">Hapus</a>
+                            <a href="{{ url('/admin_slider/'.$item->id.'/edit') }}" class="btn btn-sm btn-primary m-1">Edit</a>
+                            <a href="{{ url('/admin_slider/destroy/'.$item->id) }}" class="btn btn-sm btn-danger m-1">Hapus</a>
                         </div>
 
                     </div>

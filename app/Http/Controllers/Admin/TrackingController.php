@@ -47,7 +47,7 @@ class TrackingController extends Controller
             'description' => $request->description,
         ]);
 
-        return redirect('/tracking/'.$request->no_invoice)->with('status', 'Berhasil update No RESI.');
+        return redirect('/admin_tracking/'.$request->no_invoice)->with('status', 'Berhasil update No RESI.');
     }
 
 

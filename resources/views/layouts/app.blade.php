@@ -34,11 +34,13 @@
 
     <!-- Stylesheets -->
     <link href="{{ asset('theme/css/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('theme/css/whatsapp-widget.css') }}" rel="stylesheet">
 
 </head>
 
 <body>
     <div class="page-wrapper">
+        
         <x-partials.header-top :company="$company" />
         <x-partials.header-uper :company="$company" />
         <x-partials.main-navbar />
@@ -52,18 +54,21 @@
 
 
     <!-- scroll-to-top -->
-    <div id="back-to-top" class="back-to-top">
+    {{-- <div id="back-to-top" class="back-to-top hide">
         <i class="fa fa-angle-up"></i>
-    </div>
+    </div> --}}
 
-    </div>
+    {{-- </div> --}}
     <!--End pagewrapper-->
 
 
     <!--Scroll to top-->
-    <div class="scroll-to-top scroll-to-target" data-target=".header-top">
+    {{-- <div class="scroll-to-top scroll-to-target hide" data-target=".header-top">
         <span class="icon fa fa-angle-up"></span>
-    </div>
+    </div> --}}
+
+     <!--widget wa -->
+    <form id="general-support" class="wa-widget" action="#" data-chat="general-support"></form>
 
 
 
@@ -83,6 +88,19 @@
 
     <!-- script js -->
     <script src="{{ asset('theme/js/script.js') }}"></script>
+
+    <script src="{{ asset('theme/js/whatsapp-widget.js') }}"></script>
+    <script>
+        var generalSupport = new WhatsAppWidget(document.getElementById('general-support'), {
+            name: 'PT Bintang Samudera Nuswantoro',
+            division: 'Hubungi Whatsapp Sales Kami',
+            photo: '{{ asset('theme/images/'.$company->image) }}',
+            introduction: 'Arti : <a href="https://api.whatsapp.com/send?phone=6285714753816&text=Hallo%20BSNCargo%20saya%20mau%20tanya..." target="_blank" style="color:green;">+6285714753816</a>',
+            introduction2: 'Raju : <a href="https://api.whatsapp.com/send?phone=6281298819922&text=Hallo%20BSNCargo%20saya%20mau%20tanya..." target="_blank" style="color:green;">+6281298819922</a>'
+        });
+        // generalSupport.toggle()
+    </script>
+    
 
 </body>
 

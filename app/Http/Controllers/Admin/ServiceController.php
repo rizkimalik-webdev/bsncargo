@@ -52,7 +52,7 @@ class ServiceController extends Controller
             'image' => $nama_image,
         ]);
 
-        return redirect('/service')->with('status', 'Berhasil tambah Data.');
+        return redirect('/admin_service')->with('status', 'Berhasil tambah Data.');
     }
 
 
@@ -104,10 +104,10 @@ class ServiceController extends Controller
 
         if($service){
             //? redirect dengan pesan sukses
-            return redirect('/service')->with('status','Data Berhasil Diupdate!');
+            return redirect('/admin_service')->with('status','Data Berhasil Diupdate!');
         }else{
             //! redirect dengan pesan error
-            return redirect('/service')->with('status','Data Gagal Diupdate!');
+            return redirect('/admin_service')->with('status','Data Gagal Diupdate!');
         }
     }
 

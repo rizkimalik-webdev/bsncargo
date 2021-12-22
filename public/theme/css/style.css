@@ -233,8 +233,8 @@ li {
 }
 
 .header-top {
-  background: #ffffff;
-  border-bottom: 1px solid #ececec;
+  background: #0d1a2f;
+  border-bottom: 1px solid #0e2852;
 }
 
 .header-top .top-left h6 {
@@ -291,6 +291,7 @@ li {
 
 .header-uper {
   padding: 40px 0px;
+  background: #132646;
 }
 
 .header-uper .contact-info {
@@ -3665,3 +3666,5 @@ button:focus {
 }
 
 /*# sourceMappingURL=style.css.map */
+
+

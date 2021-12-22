@@ -132,7 +132,7 @@ class ShipmentController extends Controller
             'file_invoice' => $file_invoice_hash,
         ]);
 
-        return redirect('/shipment')->with('status', 'Berhasil tambah Data.');
+        return redirect('/admin_shipment')->with('status', 'Berhasil tambah Data.');
     }
 
 

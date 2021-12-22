@@ -7,7 +7,7 @@
             <div class="col-lg-12 d-flex justify-content-between align-items-center">
                 <h1>Pengiriman</h1>
                 <div>
-                    <a href="{{ url('/shipment/create') }}" class="btn btn-sm btn-primary">Tambah Pengiriman</a>
+                    <a href="{{ url('/admin_shipment/create') }}" class="btn btn-sm btn-primary">Tambah Pengiriman</a>
                 </div>
             </div>
         </div>
@@ -50,10 +50,10 @@
                                     <button type="button" id="btnAction" class="btn btn-sm btn-primary dropdown-toggle"
                                         data-bs-toggle="dropdown" aria-expanded="false">Action</button>
                                     <ul class="dropdown-menu" aria-labelledby="btnAction">
-                                        <li><a class="dropdown-item" href="{{ url('/tracking/'.$item->no_invoice) }}"><i class="fa fa-truck-moving"></i> Tracking</a></li>
+                                        <li><a class="dropdown-item" href="{{ url('/admin_tracking/'.$item->no_invoice) }}"><i class="fa fa-truck-moving"></i> Tracking</a></li>
                                         <li><a class="dropdown-item" href="#"><i class="fa fa-info-circle"></i> View Detail</a></li>
                                         <li><hr class="dropdown-divider"></li>
-                                        <li><a class="dropdown-item" href="{{ url('/shipment/destroy/'.$item->no_invoice) }}"><i class="fa fa-trash-alt"></i> Hapus</a></li>
+                                        <li><a class="dropdown-item" href="{{ url('/admin_shipment/destroy/'.$item->no_invoice) }}"><i class="fa fa-trash-alt"></i> Hapus</a></li>
                                     </ul>
                                 </td>
                             </tr>

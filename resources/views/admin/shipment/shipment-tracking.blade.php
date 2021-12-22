@@ -22,7 +22,7 @@
             Form Tracking No RESI.
         </div>
         <div class="card-body">
-            <form action="{{ url('/tracking/store') }}" method="POST" enctype="multipart/form-data">
+            <form action="{{ url('/admin_tracking/store') }}" method="POST" enctype="multipart/form-data">
                 @csrf
 
                 <div class="border rounded mx-1 my-2 p-2">
@@ -77,7 +77,7 @@
                                 @else
                                     <button class="btn btn-primary" type="submit">Update</button>
                                 @endif
-                                <a href="{{ url('/shipment') }}" class="btn btn-outline-primary mx-2">Kembali</a>
+                                <a href="{{ url('/admin_shipment') }}" class="btn btn-outline-primary mx-2">Kembali</a>
                             </div>
                         </div>
                     </div>
@@ -162,7 +162,7 @@
                                         data-bs-toggle="dropdown" aria-expanded="false">Action</button>
                                     <ul class="dropdown-menu" aria-labelledby="btnAction">
                                         <li><a class="dropdown-item"
-                                                href="{{ url('/shipment/destroy/' . $item->no_invoice) }}"><i
+                                                href="{{ url('/admin_shipment/destroy/' . $item->no_invoice) }}"><i
                                                     class="fa fa-trash-alt"></i> Hapus</a></li>
                                     </ul>
                                 </td>

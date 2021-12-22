@@ -14,7 +14,7 @@
         </div>
         @endif
 
-        <form action="{{ url('/about/update', $about->company_id) }}" method="POST" enctype="multipart/form-data">
+        <form action="{{ url('/admin_about/update', $about->company_id) }}" method="POST" enctype="multipart/form-data">
             @csrf
             @method('PUT')
 

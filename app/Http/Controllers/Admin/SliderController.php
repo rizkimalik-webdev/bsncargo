@@ -51,7 +51,7 @@ class SliderController extends Controller
             'image' => $nama_image,
         ]);
 
-        return redirect('/slider')->with('status', 'Berhasil tambah Data.');
+        return redirect('/admin_slider')->with('status', 'Berhasil tambah Data.');
     }
 
     public function edit(Slider $sliders)
@@ -102,10 +102,10 @@ class SliderController extends Controller
         // $product->update($request->all());
         if($slider){
             //? redirect dengan pesan sukses
-            return redirect('/slider')->with('status','Data Berhasil Diupdate!');
+            return redirect('/admin_slider')->with('status','Data Berhasil Diupdate!');
         }else{
             //! redirect dengan pesan error
-            return redirect('/slider')->with('status','Data Gagal Diupdate!');
+            return redirect('/admin_slider')->with('status','Data Gagal Diupdate!');
         }
     }
 

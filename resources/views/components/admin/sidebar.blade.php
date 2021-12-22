@@ -3,37 +3,37 @@
         <div class="sb-sidenav-menu">
             <div class="nav">
                 <div class="sb-sidenav-menu-heading">LOGISTIK</div>
-                <a class="nav-link" href="{{ url('/shipment') }}">
+                <a class="nav-link" href="{{ url('/admin_shipment') }}">
                     <div class="sb-nav-link-icon"><i class="fa fa-building"></i></div>
                     Pengiriman
                 </a>
-                <a class="nav-link" href="{{ url('/tracking') }}">
+                <a class="nav-link" href="{{ url('/admin_tracking') }}">
                     <div class="sb-nav-link-icon"><i class="fa fa-box"></i></div>
                     Tracking
                 </a>
-                <a class="nav-link" href="{{ url('/tracking') }}">
+                <a class="nav-link" href="{{ url('/admin_tracking') }}">
                     <div class="sb-nav-link-icon"><i class="fa fa-box"></i></div>
                     Pengirim
                 </a>
-                <a class="nav-link" href="{{ url('/tracking') }}">
+                <a class="nav-link" href="{{ url('/admin_tracking') }}">
                     <div class="sb-nav-link-icon"><i class="fa fa-box"></i></div>
                     Penerima
                 </a>
 
                 <div class="sb-sidenav-menu-heading">Company Profile</div>
-                <a class="nav-link" href="{{ url('/profile') }}">
+                <a class="nav-link" href="{{ url('/admin_profile') }}">
                     <div class="sb-nav-link-icon"><i class="fa fa-building"></i></div>
                     Profile Perusahaan
                 </a>
-                <a class="nav-link" href="{{ url('/service') }}">
+                <a class="nav-link" href="{{ url('/admin_service') }}">
                     <div class="sb-nav-link-icon"><i class="fa fa-box"></i></div>
                     Kategori Layanan
                 </a>
-                <a class="nav-link" href="{{ url('/slider') }}">
+                <a class="nav-link" href="{{ url('/admin_slider') }}">
                     <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                     Slider Utama
                 </a>
-                <a class="nav-link" href="{{ url('/gallery') }}">
+                <a class="nav-link" href="{{ url('/admin_gallery') }}">
                     <div class="sb-nav-link-icon"><i class="fas fa-photo-video"></i></div>
                     Gallery
                 </a>
@@ -47,20 +47,20 @@
                 <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne"
                     data-bs-parent="#sidenavAccordion">
                     <nav class="sb-sidenav-menu-nested nav">
-                        <a class="nav-link" href="{{ url('/faq/syarat') }}">Syarat Ketentuan</a>
-                        <a class="nav-link" href="{{ url('/faq/bisnis') }}">Bisnis & Jasa</a>
+                        <a class="nav-link" href="{{ url('/admin_faq/syarat') }}">Syarat Ketentuan</a>
+                        <a class="nav-link" href="{{ url('/admin_faq/bisnis') }}">Bisnis & Jasa</a>
                     </nav>
                 </div>
-                <a class="nav-link" href="{{ url('/about') }}">
+                <a class="nav-link" href="{{ url('/admin_about') }}">
                     <div class="sb-nav-link-icon"><i class="fas fa-align-right"></i></div>
                     Visi & Misi
                 </a>
 
-                <a class="nav-link" href="{{ url('/partner') }}">
+                <a class="nav-link" href="{{ url('/admin_partner') }}">
                     <div class="sb-nav-link-icon"><i class="fas fa-handshake"></i></div>
                     Partner Perusahaan
                 </a>
-                <a class="nav-link" href="{{ url('/client') }}">
+                <a class="nav-link" href="{{ url('/admin_client') }}">
                     <div class="sb-nav-link-icon"><i class="fas fa-users"></i></div>
                     Client Testimonial
                 </a>

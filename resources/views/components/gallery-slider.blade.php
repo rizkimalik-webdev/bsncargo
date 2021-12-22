@@ -4,10 +4,7 @@
             <h3>Gallery
                 <span>Pengiriman</span>
             </h3>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet. qui suscipit atque
-                <br>
-                fugiat officia corporis rerum eaque neque totam animi, sapiente culpa. Architecto!
-            </p>
+            <p>Gallery pengiriman logistik kami.</p>
         </div>
         <div class="row">
             <div class="col-lg-12">
@@ -29,7 +26,6 @@
                         </div>
                     </div>
                     @endforeach
-
                 </div>
             </div>
         </div>

@@ -1,7 +1,7 @@
 <x-admin-layout>
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb mt-4">
-            <li class="breadcrumb-item"><a href="{{ url('/shipment') }}">Pengiriman</a></li>
+            <li class="breadcrumb-item"><a href="{{ url('/admin_shipment') }}">Pengiriman</a></li>
             <li class="breadcrumb-item active" aria-current="page">Tambah Pengiriman</li>
         </ol>
     </nav>
@@ -11,7 +11,7 @@
             Form Pengiriman
         </div>
         <div class="card-body">
-            <form action="{{ url('/shipment/store') }}" method="POST" enctype="multipart/form-data">
+            <form action="{{ url('/admin_shipment/store') }}" method="POST" enctype="multipart/form-data">
                 @csrf
 
                 <div class="border rounded mx-1 my-2 p-2">
@@ -206,7 +206,7 @@
 
                 <div class="d-flex flex-row-reverse p-1 my-4">
                     <button class="btn btn-primary" type="submit">Simpan</button>
-                    <a href="{{ url('/shipment') }}" class="btn btn-outline-primary mx-2">Kembali</a>
+                    <a href="{{ url('/admin_shipment') }}" class="btn btn-outline-primary mx-2">Kembali</a>
                 </div>
             </form>
         </div>

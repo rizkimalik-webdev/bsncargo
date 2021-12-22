@@ -93,7 +93,7 @@
                         Informasi Perusahaan
                     </div>
                     <div class="card-body">
-                        <form action="{{ url('/profile/update', $company->id) }}" method="POST"
+                        <form action="{{ url('/admin_profile/update', $company->id) }}" method="POST"
                             enctype="multipart/form-data">
                             @csrf
                             @method('PUT')

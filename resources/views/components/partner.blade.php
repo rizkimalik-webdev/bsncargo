@@ -19,41 +19,6 @@
             </div>
             @endforeach
             
-            {{-- <div class="col-lg-2 col-md-6">
-                <div class="gallery-item">
-                    <img loading="lazy" src="{{ asset('theme/images/partner/partner.png') }}" class="img-fluid" alt="gallery-image">
-                    <a data-fancybox="images" href="{{ asset('theme/images/partner/partner.png') }}"></a>
-                    <p>Facility 02</p>
-                </div>
-            </div>
-            <div class="col-lg-2 col-md-6">
-                <div class="gallery-item">
-                    <img loading="lazy" src="{{ asset('theme/images/partner/partner.png') }}" class="img-fluid" alt="gallery-image">
-                    <a data-fancybox="images" href="{{ asset('theme/images/partner/partner.png') }}"></a>
-                    <p>Facility 03</p>
-                </div>
-            </div>
-            <div class="col-lg-2 col-md-6">
-                <div class="gallery-item">
-                    <img loading="lazy" src="{{ asset('theme/images/partner/partner.png') }}" class="img-fluid" alt="gallery-image">
-                    <a data-fancybox="images" href="{{ asset('theme/images/partner/partner.png') }}"></a>
-                    <p>Facility 04</p>
-                </div>
-            </div>
-            <div class="col-lg-2 col-md-6">
-                <div class="gallery-item">
-                    <img loading="lazy" src="{{ asset('theme/images/partner/partner.png') }}" class="img-fluid" alt="gallery-image">
-                    <a data-fancybox="images" href="{{ asset('theme/images/partner/partner.png') }}"></a>
-                    <p>Facility 05</p>
-                </div>
-            </div>
-            <div class="col-lg-2 col-md-6">
-                <div class="gallery-item">
-                    <img loading="lazy" src="{{ asset('theme/images/partner/partner.png') }}" class="img-fluid" alt="gallery-image">
-                    <a data-fancybox="images" href="{{ asset('theme/images/partner/partner.png') }}"></a>
-                    <p>Facility 06</p>
-                </div>
-            </div> --}}
         </div>
     </div>
 </section>

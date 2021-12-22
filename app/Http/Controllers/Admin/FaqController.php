@@ -40,7 +40,7 @@ class FaqController extends Controller
             'type' => 'syarat_ketentuan',
         ]);
 
-        return redirect('/faq/syarat')->with('status', 'Berhasil tambah Data.');
+        return redirect('/admin_faq/syarat')->with('status', 'Berhasil tambah Data.');
     }
 
     public function edit_syarat(Faq $faqs)
@@ -65,10 +65,10 @@ class FaqController extends Controller
 
         if($faq){
             //? redirect dengan pesan sukses
-            return redirect('/faq/syarat')->with('status','Data Berhasil Diupdate!');
+            return redirect('/admin_faq/syarat')->with('status','Data Berhasil Diupdate!');
         }else{
             //! redirect dengan pesan error
-            return redirect('/faq/syarat')->with('status','Data Gagal Diupdate!');
+            return redirect('/admin_faq/syarat')->with('status','Data Gagal Diupdate!');
         }
     }
 
@@ -110,7 +110,7 @@ class FaqController extends Controller
             'type' => 'bisnis_jasa',
         ]);
 
-        return redirect('/faq/bisnis')->with('status', 'Berhasil tambah Data.');
+        return redirect('/admin_faq/bisnis')->with('status', 'Berhasil tambah Data.');
     }
 
     public function edit_bisnis(Faq $faqs)
@@ -135,10 +135,10 @@ class FaqController extends Controller
 
         if($faq){
             //? redirect dengan pesan sukses
-            return redirect('/faq/bisnis')->with('status','Data Berhasil Diupdate!');
+            return redirect('/admin_faq/bisnis')->with('status','Data Berhasil Diupdate!');
         }else{
             //! redirect dengan pesan error
-            return redirect('/faq/bisnis')->with('status','Data Gagal Diupdate!');
+            return redirect('/admin_faq/bisnis')->with('status','Data Gagal Diupdate!');
         }
     }
 

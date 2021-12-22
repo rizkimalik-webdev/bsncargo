@@ -17,9 +17,9 @@
                                     <i class="far fa-envelope text-primary"></i>
 
                                 </div>
-                                <strong>Email</strong>
+                                <strong class="text-white">Email</strong>
                                 <br>
-                                <span>{{ $company->email }}</span>
+                                <span class="text-white">{{ $company->email }}</span>
                             </a>
                         </li>
                         <li class="item text-left text-success">
@@ -27,9 +27,9 @@
                                 <div class="icon-box border border-success">
                                     <i class="fab fa-whatsapp text-success"></i>
                                 </div>
-                                <strong>Whatsapp</strong>
+                                <strong class="text-white">Whatsapp</strong>
                                 <br>
-                                <span>{{ $company->whatsapp }}</span>
+                                <span class="text-white">{{ $company->whatsapp }}</span>
                             </a>
                         </li>
                     </ul>

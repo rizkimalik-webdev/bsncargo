@@ -1,19 +1,17 @@
 <x-admin-layout>
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb mt-4">
-            <li class="breadcrumb-item"><a href="{{ url('/slider') }}">Slider</a></li>
+            <li class="breadcrumb-item"><a href="{{ url('/admin_slider') }}">Slider</a></li>
             <li class="breadcrumb-item active" aria-current="page">Create</li>
         </ol>
     </nav>
-
-    
 
     <div class="card">
         <div class="card-header">
             Tambah Slider
         </div>
         <div class="card-body">
-            <form action="{{ url('/slider/store') }}" method="POST" enctype="multipart/form-data">
+            <form action="{{ url('/admin_slider/store') }}" method="POST" enctype="multipart/form-data">
                 @csrf
 
                 <div class="mb-3">
@@ -33,7 +31,7 @@
 
                 <div class="pull-right">
                     <button class="btn btn-primary" type="submit">Simpan</button>
-                    <a href="{{ url('/slider') }}" class="btn btn-outline-primary">Kembali</a>
+                    <a href="{{ url('/admin_slider') }}" class="btn btn-outline-primary">Kembali</a>
                 </div>
             </form>
         </div>
