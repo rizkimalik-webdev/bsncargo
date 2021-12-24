@@ -1,7 +1,9 @@
 <x-admin-layout>
     @slot('style')
         <link rel="stylesheet" href="{{ asset('theme/admin/css/dataTables.bootstrap5.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('theme/plugins/datetimepicker/jquery.datetimepicker.min.css') }}">
     @endslot
+
     <div class="container-fluid">
         <div class="row my-4">
             <div class="col-lg-12 d-flex justify-content-between align-items-center">
@@ -64,7 +66,7 @@
                             </div>
                             <div class="mb-2">
                                 <label for="datetime" class="form-label">Waktu</label>
-                                <input type="date" class="form-control" id="datetime" name="datetime" required>
+                                <input type="text" class="form-control datetimepicker" id="datetime" name="datetime" required>
                             </div>
                             <div class="mb-2">
                                 <label for="description" class="form-label">Keterangan (optional)</label>
@@ -82,45 +84,6 @@
                         </div>
                     </div>
                 </div>
-
-                <div class="accordion" id="accordionExample">
-                    <div class="accordion-item">
-                      <h2 class="accordion-header" id="headingOne">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                          Accordion Item #1
-                        </button>
-                      </h2>
-                      <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                          <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                        </div>
-                      </div>
-                    </div>
-                    <div class="accordion-item">
-                      <h2 class="accordion-header" id="headingTwo">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                          Accordion Item #2
-                        </button>
-                      </h2>
-                      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                          <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                        </div>
-                      </div>
-                    </div>
-                    <div class="accordion-item">
-                      <h2 class="accordion-header" id="headingThree">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                          Accordion Item #3
-                        </button>
-                      </h2>
-                      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                          <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                        </div>
-                      </div>
-                    </div>
-                  </div>
             </form>
         </div>
     </div>
@@ -180,19 +143,26 @@
                     </tfoot>
                 </table>
 
-
-                @slot('script')
-                    <script src="{{ asset('theme/admin/js/jquery-3.5.1.min.js') }}"></script>
-                    <script src="{{ asset('theme/admin/js/jquery.dataTables.min.js') }}"></script>
-                    <script src="{{ asset('theme/admin/js/dataTables.bootstrap5.min.js') }}"></script>
-                    <script>
-                        $(document).ready(function() {
-                            $('.DataTable').DataTable();
-                        });
-                    </script>
-                @endslot
             </div>
         </div>
     </div>
 
+    @slot('script')
+        <script src="{{ asset('theme/admin/js/jquery-3.5.1.min.js') }}"></script>
+        <script src="{{ asset('theme/admin/js/jquery.dataTables.min.js') }}"></script>
+        <script src="{{ asset('theme/admin/js/dataTables.bootstrap5.min.js') }}"></script>
+        <script src="{{ asset('theme/plugins/datetimepicker/jquery.datetimepicker.full.min.js') }}"></script>
+        <script>
+            $(document).ready(function() {
+                $('.DataTable').DataTable();
+
+                $.datetimepicker.setLocale('en');
+                $('.datetimepicker').datetimepicker({
+                    mask: '9999/19/39 29:59',
+                    format: 'Y/m/d H:i',
+                    step: 1
+                });
+            });
+        </script>
+    @endslot
 </x-admin-layout>

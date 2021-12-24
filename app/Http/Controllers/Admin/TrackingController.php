@@ -17,6 +17,11 @@ class TrackingController extends Controller
         $this->middleware('auth');
     }
 
+    public function search()
+    {
+        return view('admin.tracking.tracking-search');
+    }
+
     public function tracking(Shipment $shipments)
     {
         $logistic = Company::first();

@@ -103,9 +103,11 @@ Route::middleware(['auth', 'verified'])->group(function () {
 
         Route::get('/admin_shipment', [AdminShipmentController::class, 'index']);
         Route::get('/admin_shipment/create', [AdminShipmentController::class, 'create']);
+        Route::get('/admin_shipment/{shipments:no_invoice}', [AdminShipmentController::class, 'show']);
         Route::post('/admin_shipment/store', [AdminShipmentController::class, 'store']);
         Route::get('/admin_shipment/destroy/{shipments:no_invoice}', [AdminShipmentController::class, 'destroy']);
         
+        Route::get('/admin_tracking', [AdminTrackingController::class, 'search']);
         Route::get('/admin_tracking/{shipments:no_invoice}', [AdminTrackingController::class, 'tracking']);
         Route::post('/admin_tracking/store', [AdminTrackingController::class, 'store']);
 

@@ -107,7 +107,7 @@ class ShipmentController extends Controller
         //? tracking pick-up
         ShipmentTracking::create([
             'no_invoice' => $request->no_invoice,
-            'datetime' => date('Y-m-d H:i:s'),
+            'datetime' => $request->datetime,
             'status' => 'PICK-UP',
             'description' => $request->description,
         ]);
@@ -136,12 +136,31 @@ class ShipmentController extends Controller
     }
 
 
-    public function edit(Shipment $shipment)
+    public function show(Shipment $shipments)
     {
-        return view('admin.shipment.shipment-edit', compact('shipment'));
+        $tracking = ShipmentTracking::where('no_invoice',$shipments->no_invoice)->orderBy('id', 'DESC')->first();
+        $logistic = Company::where('id',$shipments->logistic_id)->first();
+        $shipper = Shipper::where('id',$shipments->shipper_id)->first();
+        $receiver = Receiver::where('id',$shipments->receiver_id)->first();
+
+        // return [
+        //     'shipment' => $shipments, 
+        //     'tracking' => $tracking,
+        //     'logistic' => $logistic,
+        //     'shipper' => $shipper,
+        //     'receiver' => $receiver,
+        // ];
+
+        return view('admin.shipment.shipment-show', [
+            'shipment' => $shipments, 
+            'tracking' => $tracking,
+            'logistic' => $logistic,
+            'shipper' => $shipper,
+            'receiver' => $receiver,
+        ]);
     }
 
-
+/* 
     public function update(Request $request, Shipment $Shipments)
     {
         $request->validate([
@@ -190,6 +209,7 @@ class ShipmentController extends Controller
             return redirect('/Shipment')->with('status','Data Gagal Diupdate!');
         }
     }
+ */
 
     public function destroy(Shipment $shipments)
     {

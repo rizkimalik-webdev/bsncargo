@@ -2,23 +2,36 @@
     <nav class="sb-sidenav accordion sb-sidenav-light border" id="sidenavAccordion">
         <div class="sb-sidenav-menu">
             <div class="nav">
+                
                 <div class="sb-sidenav-menu-heading">LOGISTIK</div>
-                <a class="nav-link" href="{{ url('/admin_shipment') }}">
-                    <div class="sb-nav-link-icon"><i class="fa fa-building"></i></div>
-                    Pengiriman
-                </a>
                 <a class="nav-link" href="{{ url('/admin_tracking') }}">
-                    <div class="sb-nav-link-icon"><i class="fa fa-box"></i></div>
+                    <div class="sb-nav-link-icon"><i class="fa fa-route"></i></div>
                     Tracking
                 </a>
-                <a class="nav-link" href="{{ url('/admin_tracking') }}">
-                    <div class="sb-nav-link-icon"><i class="fa fa-box"></i></div>
-                    Pengirim
+                <a class="nav-link" href="{{ url('/admin_shipment') }}">
+                    <div class="sb-nav-link-icon"><i class="fa fa-shipping-fast"></i></div>
+                    Pengiriman
                 </a>
-                <a class="nav-link" href="{{ url('/admin_tracking') }}">
-                    <div class="sb-nav-link-icon"><i class="fa fa-box"></i></div>
-                    Penerima
+                <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseMasterData"
+                    aria-expanded="false" aria-controls="collapseMasterData">
+                    <div class="sb-nav-link-icon"><i class="fas fa-server"></i></div>
+                    Master Data
+                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                 </a>
+                <div class="collapse" id="collapseMasterData" aria-labelledby="headingOne"
+                    data-bs-parent="#sidenavAccordion">
+                    <nav class="sb-sidenav-menu-nested nav">
+                        <a class="nav-link" href="{{ url('/admin_faq/syarat') }}">Pengirim</a>
+                        <a class="nav-link" href="{{ url('/admin_faq/bisnis') }}">Penerima</a>
+                        <a class="nav-link" href="{{ url('/admin_faq/bisnis') }}">Jenis Pengiriman</a>
+                        <a class="nav-link" href="{{ url('/admin_faq/bisnis') }}">Jenis Layanan</a>
+                        <a class="nav-link" href="{{ url('/admin_faq/bisnis') }}">Status Pengiriman</a>
+                        <a class="nav-link" href="{{ url('/admin_faq/bisnis') }}">Barang</a>
+                        <a class="nav-link" href="{{ url('/admin_faq/bisnis') }}">Driver</a>
+                        <a class="nav-link" href="{{ url('/admin_faq/bisnis') }}">Truck</a>
+                        <a class="nav-link" href="{{ url('/admin_faq/bisnis') }}">Satuan</a>
+                    </nav>
+                </div>
 
                 <div class="sb-sidenav-menu-heading">Company Profile</div>
                 <a class="nav-link" href="{{ url('/admin_profile') }}">

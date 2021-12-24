@@ -50,10 +50,17 @@
                                     <button type="button" id="btnAction" class="btn btn-sm btn-primary dropdown-toggle"
                                         data-bs-toggle="dropdown" aria-expanded="false">Action</button>
                                     <ul class="dropdown-menu" aria-labelledby="btnAction">
-                                        <li><a class="dropdown-item" href="{{ url('/admin_tracking/'.$item->no_invoice) }}"><i class="fa fa-truck-moving"></i> Tracking</a></li>
-                                        <li><a class="dropdown-item" href="#"><i class="fa fa-info-circle"></i> View Detail</a></li>
-                                        <li><hr class="dropdown-divider"></li>
-                                        <li><a class="dropdown-item" href="{{ url('/admin_shipment/destroy/'.$item->no_invoice) }}"><i class="fa fa-trash-alt"></i> Hapus</a></li>
+                                        <li><a class="dropdown-item"
+                                                href="{{ url('/admin_tracking/' . $item->no_invoice) }}"><i
+                                                    class="fa fa-route"></i> Tracking</a></li>
+                                        <li><a class="dropdown-item" href="{{ url('/admin_shipment/' . $item->no_invoice) }}"><i class="fa fa-info-circle"></i> View
+                                                Detail</a></li>
+                                        <li>
+                                            <hr class="dropdown-divider">
+                                        </li>
+                                        <li><a class="dropdown-item"
+                                                href="{{ url('/admin_shipment/destroy/' . $item->no_invoice) }}"><i
+                                                    class="fa fa-trash-alt"></i> Hapus</a></li>
                                     </ul>
                                 </td>
                             </tr>
@@ -72,20 +79,18 @@
                         </tr>
                     </tfoot>
                 </table>
-
-
-                @slot('script')
-                    <script src="{{ asset('theme/admin/js/jquery-3.5.1.min.js') }}"></script>
-                    <script src="{{ asset('theme/admin/js/jquery.dataTables.min.js') }}"></script>
-                    <script src="{{ asset('theme/admin/js/dataTables.bootstrap5.min.js') }}"></script>
-                    <script>
-                        $(document).ready(function() {
-                            $('.DataTable').DataTable();
-                        });
-                    </script>
-                @endslot
             </div>
         </div>
     </div>
 
+    @slot('script')
+        <script src="{{ asset('theme/admin/js/jquery-3.5.1.min.js') }}"></script>
+        <script src="{{ asset('theme/admin/js/jquery.dataTables.min.js') }}"></script>
+        <script src="{{ asset('theme/admin/js/dataTables.bootstrap5.min.js') }}"></script>
+        <script>
+            $(document).ready(function() {
+                $('.DataTable').DataTable();
+            });
+        </script>
+    @endslot
 </x-admin-layout>

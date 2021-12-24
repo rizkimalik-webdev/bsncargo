@@ -1,4 +1,8 @@
 <x-admin-layout>
+    @slot('style')
+        <link rel="stylesheet" href="{{ asset('theme/plugins/datetimepicker/jquery.datetimepicker.min.css') }}">
+    @endslot
+
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb mt-4">
             <li class="breadcrumb-item"><a href="{{ url('/admin_shipment') }}">Pengiriman</a></li>
@@ -45,7 +49,7 @@
                             </div>
                             <div class="mb-2">
                                 <label for="datetime" class="form-label">Tanggal Pickup</label>
-                                <input type="date" class="form-control" id="datetime" name="datetime" required>
+                                <input type="text" class="form-control datetimepicker" id="datetime" name="datetime" required>
                             </div>
                         </div>
                     </div>
@@ -197,7 +201,7 @@
                                 <label for="file_invoice" class="form-label">Attachment Invoice (optional)</label>
                                 <input class="form-control" type="file" id="file_invoice" name="file_invoice"
                                     aria-describedby="imageHelp">
-                                <div id="imageHelp" class="form-text">File max 2Mb.</div>
+                                <div id="imageHelp" class="form-text">File jpg,png,pdf max 2Mb.</div>
                             </div>
                         </div>
                     </div>
@@ -212,5 +216,18 @@
         </div>
     </div>
 
-
+    @slot('script')
+        <script src="{{ asset('theme/admin/js/jquery-3.5.1.min.js') }}"></script>
+        <script src="{{ asset('theme/plugins/datetimepicker/jquery.datetimepicker.full.min.js') }}"></script>
+        <script>
+            $(document).ready(function() {
+                $.datetimepicker.setLocale('en');
+                $('.datetimepicker').datetimepicker({
+                    mask: '9999/19/39 29:59',
+                    format: 'Y/m/d H:i',
+                    step: 1
+                });
+            });
+        </script>
+    @endslot
 </x-admin-layout>
