@@ -36,7 +36,7 @@
                         </li>
                         <li>
                             {{-- <a href="https://admin.bsncargo.id" target="_blank" aria-label="admin"> --}}
-                            <a href="{{ url('/admin') }}" target="_blank" aria-label="admin">
+                            <a href="{{ url('/login') }}" target="_blank" aria-label="admin">
                                 <i class="fa fa-user text-white"></i>
                             </a>
                         </li>

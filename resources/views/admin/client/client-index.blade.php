@@ -17,9 +17,9 @@
 
     <div class="card">
         <div class="card-body">
-            <div class="row">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
                 @foreach($clients as $item)
-                <div class="col-lg-2">
+                <div class="col">
                     <div class="card-body">
                         <div class="card">
                             <div class="feature-icon">
@@ -30,9 +30,12 @@
                                 <h5 class="card-title">{{ $item->client }}</h5>
                                 <p class="card-text">{{ $item->description }}</p>
         
-                                <div class="d-flex justify-content-center mt-2">
-                                    <a href="{{ url('/admin_client/'.$item->id.'/edit') }}" class="btn btn-sm btn-primary m-1">Edit</a>
-                                    <a href="{{ url('/admin_client/destroy/'.$item->id) }}" class="btn btn-sm btn-danger m-1">Hapus</a>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <small class="text-muted">{{ $item->created_at }}</small>
+                                    <div>
+                                        <a href="{{ url('/admin_client/destroy/'.$item->id) }}" class="btn btn-sm btn-danger m-1">Hapus</a>
+                                        <a href="{{ url('/admin_client/'.$item->id.'/edit') }}" class="btn btn-sm btn-primary m-1">Edit</a>
+                                    </div>
                                 </div>
         
                             </div>

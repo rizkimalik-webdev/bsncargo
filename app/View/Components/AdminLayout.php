@@ -6,13 +6,13 @@ use Illuminate\View\Component;
 
 class AdminLayout extends Component
 {
-    public $title= 'BSN Cargo';
+    public $title;
     public $style = null;
     public $script = null;
 
-    public function __construct()
+    public function __construct($title = null)
     {
-        // $this->title = 'BSN CARGO';
+        $this->title = $title ?? "BSN Cargo & Logistics";
     }
 
     public function render()

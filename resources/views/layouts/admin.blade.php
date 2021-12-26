@@ -7,7 +7,7 @@
     <meta name="description" content="bsncargo">
     <meta name="author" content="Rizki Malik, and Bootstrap contributors">
     <meta name="generator" content="bsn">
-    <title>Admin | BSN Cargo</title>
+    <title>Admin | {{ $title }}</title>
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
 

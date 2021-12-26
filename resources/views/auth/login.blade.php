@@ -7,7 +7,7 @@
     <meta name="description" content="bsncargo">
     <meta name="author" content="Rizki Malik, and Bootstrap contributors">
     <meta name="generator" content="bsn">
-    <title>Admin | BSN Cargo</title>
+    <title>Admin | BSN Cargo & Logistics</title>
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
 
@@ -27,7 +27,7 @@
             @csrf
 
             <img class="mb-4" src="{{ asset('theme/images/bsncargo.png') }}" alt="" width="80" height="80">
-            <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+            <h1 class="h3 mb-3 fw-normal text-white">Please sign in</h1>
 
             <div class="form-floating mb-3">
                 <input type="text" name="username" class="form-control @error('username') is-invalid @enderror"
@@ -53,8 +53,8 @@
             </div>
 
             <div class="checkbox mb-3">
-                <label>
-                    <input id="remember" type="checkbox" {{ old('remember') ? 'checked' : '' }}> Remember me
+                <label class="checkbox text-white">
+                    <input id="remember" class="form-check-input" type="checkbox" {{ old('remember') ? 'checked' : '' }}> Remember me
                 </label>
             </div>
             <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>

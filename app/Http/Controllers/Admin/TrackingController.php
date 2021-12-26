@@ -17,9 +17,21 @@ class TrackingController extends Controller
         $this->middleware('auth');
     }
 
-    public function search()
+    public function index()
     {
         return view('admin.tracking.tracking-search');
+    }
+    
+    public function search(Request $request)
+    {
+        $check = Shipment::where('no_invoice', $request->no_invoice)->get();
+
+        if (count($check) > 0) {
+            return redirect('/admin_tracking/' . $request->no_invoice);
+        }
+        else {
+            return redirect()->back()->with('status','No Resi tidak ditemukan.');
+        }
     }
 
     public function tracking(Shipment $shipments)

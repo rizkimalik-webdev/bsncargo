@@ -40,7 +40,7 @@ Route::get('/faq', [FaqController::class, 'index']);
 
 
 //? Admin Route
-Route::get('/admin', function(){
+Route::get('/admin_login', function(){
     return view('auth.login');
 });
 
@@ -107,8 +107,9 @@ Route::middleware(['auth', 'verified'])->group(function () {
         Route::post('/admin_shipment/store', [AdminShipmentController::class, 'store']);
         Route::get('/admin_shipment/destroy/{shipments:no_invoice}', [AdminShipmentController::class, 'destroy']);
         
-        Route::get('/admin_tracking', [AdminTrackingController::class, 'search']);
+        Route::get('/admin_tracking', [AdminTrackingController::class, 'index']);
         Route::get('/admin_tracking/{shipments:no_invoice}', [AdminTrackingController::class, 'tracking']);
+        Route::post('/admin_tracking/search', [AdminTrackingController::class, 'search']);
         Route::post('/admin_tracking/store', [AdminTrackingController::class, 'store']);
 
 
@@ -118,6 +119,3 @@ Route::middleware(['auth', 'verified'])->group(function () {
         // Route::get('/upload/hapus/{uploads:id}', [UploadController::class, 'destroy']);
     // });
 });
-
-
-// require __DIR__ . '/auth.php';
