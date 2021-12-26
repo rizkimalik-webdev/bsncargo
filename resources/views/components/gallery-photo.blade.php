@@ -13,7 +13,7 @@
             <div class="col-lg-4 col-md-6">
                 <div class="gallery-item">
                     <img loading="lazy" src="{{ asset('theme/images/galleries/'.$item->image) }}" class="img-fluid" alt="{{ $item->title }}">
-                    <a data-fancybox="images" href="{{ asset('images/galleries/'.$item->image) }}">
+                    <a data-fancybox="images" href="{{ asset('theme/images/galleries/'.$item->image) }}">
                         <button class="btn btn-info" type="button">View</button>
                     </a>
                     <h3>{{ $item->title }}</h3>

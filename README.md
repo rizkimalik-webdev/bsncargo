@@ -8,7 +8,9 @@
 </p>
 
 ## Deploy CPanel
-run command :
+- setting file `.env`
+
+- run command :
 ```
 php artisan optimize:clear
 ```

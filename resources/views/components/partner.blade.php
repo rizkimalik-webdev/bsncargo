@@ -4,9 +4,7 @@
             <div class="col-lg-12">
                 <div class="section-title text-center">
                     <h3><span>Partner</span> BSN Cargo </h3>
-                    <p>Leverage agile frameworks to provide a robust synopsis for high level overv-
-                        <br>iews. Iterative approaches to corporate strategy...
-                    </p>
+                    <p>Berikut merupakan perusahan partner kami.</p>
                 </div>
             </div>
             @foreach ($partners as $item)

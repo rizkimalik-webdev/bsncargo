@@ -34,7 +34,7 @@
                         </li>
                     </ul>
                     <div class="link-btn text-center text-lg-right">
-                        <a href="/contact" class="btn-style-one">Hubungi Kami</a>
+                        <a href="/contact" class="btn-style-one">Cek Resi</a>
                     </div>
                 </div>
             </div>
