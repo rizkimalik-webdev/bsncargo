@@ -43,7 +43,7 @@ class SliderController extends Controller
 
         //? folder file diupload
         $tujuan_upload = 'theme/images/slider';
-        $image->move($tujuan_upload, $nama_image);
+        $image->move(public_path($tujuan_upload), $nama_image);
 
         Slider::create([
             'title' => $request->title,
@@ -79,7 +79,7 @@ class SliderController extends Controller
         } 
         else {
             //hapus old image
-            File::delete('theme/images/slider/' . $slider->image);
+            File::delete(public_path('theme/images/slider/' . $slider->image));
 
             //upload new image
             $image = $request->file('image');
@@ -88,7 +88,7 @@ class SliderController extends Controller
             
             //? folder file diupload
             $tujuan_upload = 'theme/images/slider';
-            $image->move($tujuan_upload, $nama_image);
+            $image->move(public_path($tujuan_upload), $nama_image);
             // $image->storeAs($tujuan_upload, $nama_image);
 
 
@@ -113,7 +113,7 @@ class SliderController extends Controller
     {
         // hapus file
         $slider = Slider::where('id', $sliders->id)->first();
-        File::delete('theme/images/slider/' . $slider->image);
+        File::delete(public_path('theme/images/slider/' . $slider->image));
 
         // hapus data
         Slider::where('id', $slider->id)->delete();

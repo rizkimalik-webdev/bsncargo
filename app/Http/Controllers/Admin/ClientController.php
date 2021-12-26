@@ -44,7 +44,7 @@ class ClientController extends Controller
 
         //? folder file diupload
         $tujuan_upload = 'theme/images/client';
-        $image->move($tujuan_upload, $nama_image);
+        $image->move(public_path($tujuan_upload), $nama_image);
 
         Client::create([
             'client' => $request->client,
@@ -82,7 +82,7 @@ class ClientController extends Controller
         } 
         else {
             //hapus old image
-            File::delete('theme/images/client/' . $client->image);
+            File::delete(public_path('theme/images/client/' . $client->image));
 
             //upload new image
             $image = $request->file('image');
@@ -91,7 +91,7 @@ class ClientController extends Controller
             
             //? folder file diupload
             $tujuan_upload = 'theme/images/client';
-            $image->move($tujuan_upload, $nama_image);
+            $image->move(public_path($tujuan_upload), $nama_image);
             // $image->storeAs($tujuan_upload, $nama_image);
 
 
@@ -115,7 +115,7 @@ class ClientController extends Controller
     {
         // hapus file
         $client = Client::where('id', $clients->id)->first();
-        File::delete('theme/images/client/' . $client->image);
+        File::delete(public_path('theme/images/client/' . $client->image));
 
         // hapus data
         Client::where('id', $client->id)->delete();

@@ -63,7 +63,7 @@ class ShipmentController extends Controller
             $file_invoice_hash = $file_invoice->hashName();
             // $file_invoice = time().'_'.$image->getClientOriginalName();
             $tujuan_upload = 'theme/invoice'; //? folder file diupload
-            $file_invoice->move($tujuan_upload, $file_invoice_hash);
+            $file_invoice->move(public_path($tujuan_upload), $file_invoice_hash);
         } 
 
         $product_slug = "";
@@ -218,7 +218,7 @@ class ShipmentController extends Controller
 
         // hapus file
         if ($shipment->file_invoice) {
-            File::delete('theme/invoice/' . $shipment->file_invoice);
+            File::delete(public_path('theme/invoice/' . $shipment->file_invoice));
         }
 
         // hapus data

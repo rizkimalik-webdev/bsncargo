@@ -44,7 +44,7 @@ class ServiceController extends Controller
 
         //? folder file diupload
         $tujuan_upload = 'theme/images/services';
-        $image->move($tujuan_upload, $nama_image);
+        $image->move(public_path($tujuan_upload), $nama_image);
 
         Service::create([
             'service' => $request->service,
@@ -82,7 +82,7 @@ class ServiceController extends Controller
         } 
         else {
             //hapus old image
-            File::delete('theme/images/services/' . $service->image);
+            File::delete(public_path('theme/images/services/' . $service->image));
 
             //upload new image
             $image = $request->file('image');
@@ -91,7 +91,7 @@ class ServiceController extends Controller
             
             //? folder file diupload
             $tujuan_upload = 'theme/images/services';
-            $image->move($tujuan_upload, $nama_image);
+            $image->move(public_path($tujuan_upload), $nama_image);
             // $image->storeAs($tujuan_upload, $nama_image);
 
 
@@ -115,7 +115,7 @@ class ServiceController extends Controller
     {
         // hapus file
         $service = Service::where('id', $services->id)->first();
-        File::delete('theme/images/services/' . $service->image);
+        File::delete(public_path('theme/images/services/' . $service->image));
 
         // hapus data
         Service::where('id', $service->id)->delete();
