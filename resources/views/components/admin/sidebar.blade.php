@@ -21,15 +21,15 @@
                 <div class="collapse" id="collapseMasterData" aria-labelledby="headingOne"
                     data-bs-parent="#sidenavAccordion">
                     <nav class="sb-sidenav-menu-nested nav">
-                        <a class="nav-link" href="{{ url('/admin_') }}">Pengirim</a>
-                        <a class="nav-link" href="{{ url('/admin_') }}">Penerima</a>
-                        <a class="nav-link" href="{{ url('/admin_') }}">Jenis Pengiriman</a>
-                        <a class="nav-link" href="{{ url('/admin_') }}">Jenis dLayanan</a>
-                        <a class="nav-link" href="{{ url('/admin_') }}">Status Pengiriman</a>
-                        <a class="nav-link" href="{{ url('/admin_') }}">Barang</a>
-                        <a class="nav-link" href="{{ url('/admin_') }}">Driver</a>
-                        <a class="nav-link" href="{{ url('/admin_') }}">Truck</a>
-                        <a class="nav-link" href="{{ url('/admin_') }}">Satuan</a>
+                        <a class="nav-link" href="{{ url('/admin_shipper') }}">Pengirim</a>
+                        <a class="nav-link" href="{{ url('/admin_receiver') }}">Penerima</a>
+                        <a class="nav-link" href="{{ url('/admin_service') }}">Jenis Pengiriman</a>
+                        <a class="nav-link" href="{{ url('/admin_service_type') }}">Jenis Layanan</a>
+                        <a class="nav-link" href="{{ url('/admin_status') }}">Status Pengiriman</a>
+                        <a class="nav-link" href="{{ url('/admin_product') }}">Barang</a>
+                        <a class="nav-link" href="{{ url('/admin_driver') }}">Driver</a>
+                        <a class="nav-link" href="{{ url('/admin_truck') }}">Truck</a>
+                        <a class="nav-link" href="{{ url('/admin_unit') }}">Satuan</a>
                     </nav>
                 </div>
 
