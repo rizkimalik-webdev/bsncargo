@@ -36,6 +36,7 @@
     <link href="{{ asset('theme/css/style.css') }}" rel="stylesheet">
     <link href="{{ asset('theme/css/whatsapp-widget.css') }}" rel="stylesheet">
 
+    {{ $style }}
 </head>
 
 <body>
@@ -90,6 +91,9 @@
     <script src="{{ asset('theme/js/script.js') }}"></script>
 
     <script src="{{ asset('theme/js/whatsapp-widget.js') }}"></script>
+    {{ $script }}
+
+    
     <script>
         var generalSupport = new WhatsAppWidget(document.getElementById('general-support'), {
             name: 'PT Bintang Samudera Nuswantoro',
@@ -101,7 +105,6 @@
         // generalSupport.toggle()
     </script>
     
-
 </body>
 
 </html>

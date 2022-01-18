@@ -9,6 +9,7 @@ use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\TeamController;
+use App\Http\Controllers\TrackingController;
 use App\Http\Controllers\Admin\SliderController as AdminSliderController;
 use App\Http\Controllers\Admin\ProfileController as AdminProfileController;
 use App\Http\Controllers\Admin\PartnerController as AdminPartnerController;
@@ -37,7 +38,9 @@ Route::get('/service', [ServiceController::class, 'index']);
 Route::get('/team', [TeamController::class, 'index']);
 Route::get('/gallery', [GalleryController::class, 'index']);
 Route::get('/faq', [FaqController::class, 'index']);
-
+Route::get('/tracking', [TrackingController::class, 'index']);
+Route::get('/tracking/{shipments:no_invoice}', [TrackingController::class, 'tracking']);
+Route::post('/tracking/search', [TrackingController::class, 'search']);
 
 //? Admin Route
 Route::get('/admin_login', function(){

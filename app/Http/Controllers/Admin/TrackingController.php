@@ -59,7 +59,7 @@ class TrackingController extends Controller
         
         ShipmentTracking::create([
             'no_invoice' => $request->no_invoice,
-            'datetime' => date('Y-m-d H:i:s'),
+            'datetime' => $request->datetime,
             'status' => $request->status,
             'description' => $request->description,
         ]);

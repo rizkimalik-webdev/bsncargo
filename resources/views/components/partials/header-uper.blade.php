@@ -13,8 +13,8 @@
                     <ul class="contact-info pl-0 mb-4 mb-md-0">
                         <li class="item text-left">
                             <a href="mailto:{{ $company->email }}">
-                                <div class="icon-box border border-primary">
-                                    <i class="far fa-envelope text-primary"></i>
+                                <div class="icon-box border border-warning">
+                                    <i class="far fa-envelope text-warning"></i>
 
                                 </div>
                                 <strong class="text-white">Email</strong>
@@ -34,7 +34,7 @@
                         </li>
                     </ul>
                     <div class="link-btn text-center text-lg-right">
-                        <a href="/contact" class="btn-style-one">Cek Resi</a>
+                        <a href="/tracking" class="btn-style-one">Cek Resi</a>
                     </div>
                 </div>
             </div>

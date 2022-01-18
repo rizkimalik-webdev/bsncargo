@@ -96,7 +96,7 @@
                         <tr>
                             <th>No RESI</th>
                             <th>Status</th>
-                            <th>Tanggal Pickup</th>
+                            <th>Tanggal</th>
                             <th>Keterangan</th>
                             <th>Actions</th>
                         </tr>
@@ -136,7 +136,7 @@
                         <tr>
                             <th>No RESI</th>
                             <th>Status</th>
-                            <th>Tanggal Pickup</th>
+                            <th>Tanggal</th>
                             <th>Keterangan</th>
                             <th>Actions</th>
                         </tr>
