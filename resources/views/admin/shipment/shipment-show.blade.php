@@ -76,20 +76,20 @@
                 <div class="row">
                     <div class="col-lg-6">
                         <div>
-                            <h5 class="font-size-15 mb-3">Detail Pengirim (Asal):</h5>
+                            <h5 class="font-size-15 mb-3">Detail Pengirim:</h5>
                             <h5 class="font-size-14 mb-2">{{ $shipper->shipper_name }}</h5>
-                            <p class="mb-1">{{ $shipper->shipper_telp }}</p>
-                            <p class="mb-1">{{ $shipper->shipper_city }}</p>
-                            <p class="mb-1">{{ $shipper->shipper_address }}</p>
+                            <p class="mb-1">Telp : {{ $shipper->shipper_telp }}</p>
+                            <p class="mb-1">Kota : {{ $shipper->shipper_city }}</p>
+                            <p class="mb-1">Alamat : <br> <small class="text-muted">{{ $shipper->shipper_address }}</small></p>
                         </div>
                     </div>
                     <div class="col-lg-6">
                         <div>
-                            <h5 class="font-size-15 mb-3">Detail Penerima (Tujuan):</h5>
+                            <h5 class="font-size-15 mb-3">Detail Penerima:</h5>
                             <h5 class="font-size-14 mb-2">{{ $receiver->receiver_name }}</h5>
-                            <p class="mb-1">{{ $receiver->receiver_telp }}</p>
-                            <p class="mb-1">{{ $receiver->receiver_city }}</p>
-                            <p class="mb-1">{{ $receiver->receiver_address }}</p>
+                            <p class="mb-1">Telp : {{ $receiver->receiver_telp }}</p>
+                            <p class="mb-1">Kota : {{ $receiver->receiver_city }}</p>
+                            <p class="mb-1">Alamat : <br> <small class="text-muted">{{ $receiver->receiver_address }}</small></p>
                         </div>
                     </div>
                 </div>
@@ -99,20 +99,16 @@
                 <div class="row">
                     <div class="col-lg-6">
                         <div>
-                            <h5 class="font-size-15 mb-3">Detail Pengirim (Asal):</h5>
-                            <h5 class="font-size-14 mb-2">{{ $shipper->shipper_name }}</h5>
-                            <p class="mb-1">{{ $shipper->shipper_telp }}</p>
-                            <p class="mb-1">{{ $shipper->shipper_city }}</p>
-                            <p class="mb-1">{{ $shipper->shipper_address }}</p>
+                            <p class="mb-1">Jenis Barang : <br> <small class="text-muted">{{ $shipment->product }}</small></p>
+                            <p class="mb-1">Driver : <br> <small class="text-muted">{{ $shipment->driver }}</small></p>
+                            <p class="mb-1">No Truck : <br> <small class="text-muted">{{ $shipment->no_truck }}</small></p>
                         </div>
                     </div>
                     <div class="col-lg-6">
                         <div>
-                            <h5 class="font-size-15 mb-3">Detail Penerima (Tujuan):</h5>
-                            <h5 class="font-size-14 mb-2">{{ $receiver->receiver_name }}</h5>
-                            <p class="mb-1">{{ $receiver->receiver_telp }}</p>
-                            <p class="mb-1">{{ $receiver->receiver_city }}</p>
-                            <p class="mb-1">{{ $receiver->receiver_address }}</p>
+                            <p class="mb-1">Layanan  : <br> <small class="text-muted">{{ $shipment->service }} - {{ $shipment->service_type }}</small></p>
+                            <p class="mb-1">Jumlah : <br> <small class="text-muted">{{ $shipment->amount }} {{ $shipment->unit }}</small></p>
+                            <p class="mb-1">Keterangan : <br> <small class="text-muted">{{ $shipment->description }}</small></p>
                         </div>
                     </div>
                 </div>

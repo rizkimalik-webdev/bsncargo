@@ -12,7 +12,7 @@
                     <div class="sb-nav-link-icon"><i class="fa fa-shipping-fast"></i></div>
                     Pengiriman
                 </a>
-                <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseMasterData"
+                {{-- <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseMasterData"
                     aria-expanded="false" aria-controls="collapseMasterData">
                     <div class="sb-nav-link-icon"><i class="fas fa-server"></i></div>
                     Master Data
@@ -31,7 +31,7 @@
                         <a class="nav-link" href="{{ url('/admin_truck') }}">Truck</a>
                         <a class="nav-link" href="{{ url('/admin_unit') }}">Satuan</a>
                     </nav>
-                </div>
+                </div> --}}
 
                 <div class="sb-sidenav-menu-heading">Company Profile</div>
                 <a class="nav-link" href="{{ url('/admin_profile') }}">
