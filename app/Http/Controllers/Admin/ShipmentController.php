@@ -143,14 +143,6 @@ class ShipmentController extends Controller
         $shipper = Shipper::where('id',$shipments->shipper_id)->first();
         $receiver = Receiver::where('id',$shipments->receiver_id)->first();
 
-        // return [
-        //     'shipment' => $shipments, 
-        //     'tracking' => $tracking,
-        //     'logistic' => $logistic,
-        //     'shipper' => $shipper,
-        //     'receiver' => $receiver,
-        // ];
-
         return view('admin.shipment.shipment-show', [
             'shipment' => $shipments, 
             'tracking' => $tracking,
@@ -159,57 +151,6 @@ class ShipmentController extends Controller
             'receiver' => $receiver,
         ]);
     }
-
-/* 
-    public function update(Request $request, Shipment $Shipments)
-    {
-        $request->validate([
-            'image' => 'file|image|mimes:jpeg,png,jpg|max:2048',
-            'Shipment' => 'required',
-            'description' => 'required'
-        ]);
-
-        //? get data by ID
-        $Shipment = Shipment::findOrFail($Shipments->id);
-
-        if ($request->file('image') == "") {
-
-            $Shipment->update([
-                'Shipment' => $request->Shipment,
-                'description' => $request->description
-            ]);
-        } 
-        else {
-            //hapus old image
-            File::delete('theme/images/Shipment/' . $Shipment->image);
-
-            //upload new image
-            $image = $request->file('image');
-            $nama_image = time().'_'.$image->getClientOriginalName();
-            // $nama_image = $image->hashName();
-            
-            //? folder file diupload
-            $tujuan_upload = 'theme/images/Shipment';
-            $image->move($tujuan_upload, $nama_image);
-            // $image->storeAs($tujuan_upload, $nama_image);
-
-
-            $Shipment->update([
-                'image' => $nama_image,
-                'Shipment' => $request->Shipment,
-                'description' => $request->description
-            ]);
-        }
-
-        if($Shipment){
-            //? redirect dengan pesan sukses
-            return redirect('/Shipment')->with('status','Data Berhasil Diupdate!');
-        }else{
-            //! redirect dengan pesan error
-            return redirect('/Shipment')->with('status','Data Gagal Diupdate!');
-        }
-    }
- */
 
     public function destroy(Shipment $shipments)
     {
